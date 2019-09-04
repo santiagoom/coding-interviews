@@ -1,10 +1,12 @@
 #include <iostream>
 #include <vector>
+#include <cstdio>
+#include <cstring>
 
 using namespace std;
 
+
 class Solution {
-//    v2
 public:
     void replaceSpace(char *str, int length) {
         if (str == nullptr || 0 >= length)
