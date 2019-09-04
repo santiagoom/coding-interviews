@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(25_MergeSortedLists_std 25_MergeSortedLists_std.cpp)
+add_executable(25_MergeSortedLists_std_debug 25_MergeSortedLists_std_debug.cpp)
+add_executable(25_MergeSortedLists_practise 25_MergeSortedLists_practise.cpp)
+add_executable(Solutions25_Merge Solutions.cpp)

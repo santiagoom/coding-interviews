@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(10_Fibonacci_std 10_Fibonacci_std.cpp)
+add_executable(10_Fibonacci_std_debug 10_Fibonacci_std_debug.cpp)
+add_executable(10_Fibonacci_practise 10_Fibonacci_practise.cpp)
+add_executable(Solutions10_Fibon Solutions.cpp)

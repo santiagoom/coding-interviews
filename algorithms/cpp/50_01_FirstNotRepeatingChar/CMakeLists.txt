@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(50_01_FirstNotRepeatingChar_std 50_01_FirstNotRepeatingChar_std.cpp)
+add_executable(50_01_FirstNotRepeatingChar_std_debug 50_01_FirstNotRepeatingChar_std_debug.cpp)
+add_executable(50_01_FirstNotRepeatingChar_practise 50_01_FirstNotRepeatingChar_practise.cpp)
+add_executable(Solutions50_01_Fi Solutions.cpp)

@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(38_StringPermutation_std 38_StringPermutation_std.cpp)
+add_executable(38_StringPermutation_std_debug 38_StringPermutation_std_debug.cpp)
+add_executable(38_StringPermutation_practise 38_StringPermutation_practise.cpp)
+add_executable(Solutions38_Strin Solutions.cpp)

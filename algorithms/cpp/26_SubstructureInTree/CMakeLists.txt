@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(26_SubstructureInTree_std 26_SubstructureInTree_std.cpp)
+add_executable(26_SubstructureInTree_std_debug 26_SubstructureInTree_std_debug.cpp)
+add_executable(26_SubstructureInTree_practise 26_SubstructureInTree_practise.cpp)
+add_executable(Solutions26_Subst Solutions.cpp)

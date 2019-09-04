@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(62_LastNumberInCircle_std 62_LastNumberInCircle_std.cpp)
+add_executable(62_LastNumberInCircle_std_debug 62_LastNumberInCircle_std_debug.cpp)
+add_executable(62_LastNumberInCircle_practise 62_LastNumberInCircle_practise.cpp)
+add_executable(Solutions62_LastN Solutions.cpp)

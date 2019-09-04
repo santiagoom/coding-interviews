@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(50_02_FirstCharacterInStream_std 50_02_FirstCharacterInStream_std.cpp)
+add_executable(50_02_FirstCharacterInStream_std_debug 50_02_FirstCharacterInStream_std_debug.cpp)
+add_executable(50_02_FirstCharacterInStream_practise 50_02_FirstCharacterInStream_practise.cpp)
+add_executable(Solutions50_02_Fi Solutions.cpp)

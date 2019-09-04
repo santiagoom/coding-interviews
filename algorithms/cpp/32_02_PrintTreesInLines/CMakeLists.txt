@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(32_02_PrintTreesInLines_std 32_02_PrintTreesInLines_std.cpp)
+add_executable(32_02_PrintTreesInLines_std_debug 32_02_PrintTreesInLines_std_debug.cpp)
+add_executable(32_02_PrintTreesInLines_practise 32_02_PrintTreesInLines_practise.cpp)
+add_executable(Solutions32_02_Pr Solutions.cpp)

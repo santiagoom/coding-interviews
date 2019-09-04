@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(44_DigitsInSequence_std 44_DigitsInSequence_std.cpp)
+add_executable(44_DigitsInSequence_std_debug 44_DigitsInSequence_std_debug.cpp)
+add_executable(44_DigitsInSequence_practise 44_DigitsInSequence_practise.cpp)
+add_executable(Solutions44_Digit Solutions.cpp)

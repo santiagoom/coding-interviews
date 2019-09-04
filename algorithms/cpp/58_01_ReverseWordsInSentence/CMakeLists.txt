@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(58_01_ReverseWordsInSentence_std 58_01_ReverseWordsInSentence_std.cpp)
+add_executable(58_01_ReverseWordsInSentence_std_debug 58_01_ReverseWordsInSentence_std_debug.cpp)
+add_executable(58_01_ReverseWordsInSentence_practise 58_01_ReverseWordsInSentence_practise.cpp)
+add_executable(Solutions58_01_Re Solutions.cpp)

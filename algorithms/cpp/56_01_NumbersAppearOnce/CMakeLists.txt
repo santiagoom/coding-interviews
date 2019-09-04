@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(56_01_NumbersAppearOnce_std 56_01_NumbersAppearOnce_std.cpp)
+add_executable(56_01_NumbersAppearOnce_std_debug 56_01_NumbersAppearOnce_std_debug.cpp)
+add_executable(56_01_NumbersAppearOnce_practise 56_01_NumbersAppearOnce_practise.cpp)
+add_executable(Solutions56_01_Nu Solutions.cpp)

@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(17_Print1ToMaxOfNDigits_std 17_Print1ToMaxOfNDigits_std.cpp)
+add_executable(17_Print1ToMaxOfNDigits_std_debug 17_Print1ToMaxOfNDigits_std_debug.cpp)
+add_executable(17_Print1ToMaxOfNDigits_practise 17_Print1ToMaxOfNDigits_practise.cpp)
+add_executable(Solutions17_Print Solutions.cpp)

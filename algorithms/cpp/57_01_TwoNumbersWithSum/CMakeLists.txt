@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(57_01_TwoNumbersWithSum_std 57_01_TwoNumbersWithSum_std.cpp)
+add_executable(57_01_TwoNumbersWithSum_std_debug 57_01_TwoNumbersWithSum_std_debug.cpp)
+add_executable(57_01_TwoNumbersWithSum_practise 57_01_TwoNumbersWithSum_practise.cpp)
+add_executable(Solutions57_01_Tw Solutions.cpp)

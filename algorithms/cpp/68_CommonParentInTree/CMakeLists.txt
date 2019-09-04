@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(68_CommonParentInTree_std 68_CommonParentInTree_std.cpp)
+add_executable(68_CommonParentInTree_std_debug 68_CommonParentInTree_std_debug.cpp)
+add_executable(68_CommonParentInTree_practise 68_CommonParentInTree_practise.cpp)
+add_executable(Solutions68_Commo Solutions.cpp)

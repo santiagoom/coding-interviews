@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(12_StringPathInMatrix_std 12_StringPathInMatrix_std.cpp)
+add_executable(12_StringPathInMatrix_std_debug 12_StringPathInMatrix_std_debug.cpp)
+add_executable(12_StringPathInMatrix_practise 12_StringPathInMatrix_practise.cpp)
+add_executable(Solutions12_Strin Solutions.cpp)

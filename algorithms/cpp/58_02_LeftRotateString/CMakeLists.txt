@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(58_02_LeftRotateString_std 58_02_LeftRotateString_std.cpp)
+add_executable(58_02_LeftRotateString_std_debug 58_02_LeftRotateString_std_debug.cpp)
+add_executable(58_02_LeftRotateString_practise 58_02_LeftRotateString_practise.cpp)
+add_executable(Solutions58_02_Le Solutions.cpp)

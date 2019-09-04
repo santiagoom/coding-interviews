@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(18_02_DeleteDuplicatedNode_std 18_02_DeleteDuplicatedNode_std.cpp)
+add_executable(18_02_DeleteDuplicatedNode_std_debug 18_02_DeleteDuplicatedNode_std_debug.cpp)
+add_executable(18_02_DeleteDuplicatedNode_practise 18_02_DeleteDuplicatedNode_practise.cpp)
+add_executable(Solutions18_02_De Solutions.cpp)

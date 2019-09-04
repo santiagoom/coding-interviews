@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(11_MinNumberInRotatedArray_std 11_MinNumberInRotatedArray_std.cpp)
+add_executable(11_MinNumberInRotatedArray_std_debug 11_MinNumberInRotatedArray_std_debug.cpp)
+add_executable(11_MinNumberInRotatedArray_practise 11_MinNumberInRotatedArray_practise.cpp)
+add_executable(Solutions11_MinNu Solutions.cpp)

@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(48_LongestSubstringWithoutDup_std 48_LongestSubstringWithoutDup_std.cpp)
+add_executable(48_LongestSubstringWithoutDup_std_debug 48_LongestSubstringWithoutDup_std_debug.cpp)
+add_executable(48_LongestSubstringWithoutDup_practise 48_LongestSubstringWithoutDup_practise.cpp)
+add_executable(Solutions48_Longe Solutions.cpp)

@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(23_EntryNodeInListLoop_std 23_EntryNodeInListLoop_std.cpp)
+add_executable(23_EntryNodeInListLoop_std_debug 23_EntryNodeInListLoop_std_debug.cpp)
+add_executable(23_EntryNodeInListLoop_practise 23_EntryNodeInListLoop_practise.cpp)
+add_executable(Solutions23_Entry Solutions.cpp)

@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(08_NextNodeInBinaryTrees_std 08_NextNodeInBinaryTrees_std.cpp)
+add_executable(08_NextNodeInBinaryTrees_std_debug 08_NextNodeInBinaryTrees_std_debug.cpp)
+add_executable(08_NextNodeInBinaryTrees_practise 08_NextNodeInBinaryTrees_practise.cpp)
+add_executable(Solutions08_NextN Solutions.cpp)

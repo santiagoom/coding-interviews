@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(46_TranslateNumbersToStrings_std 46_TranslateNumbersToStrings_std.cpp)
+add_executable(46_TranslateNumbersToStrings_std_debug 46_TranslateNumbersToStrings_std_debug.cpp)
+add_executable(46_TranslateNumbersToStrings_practise 46_TranslateNumbersToStrings_practise.cpp)
+add_executable(Solutions46_Trans Solutions.cpp)

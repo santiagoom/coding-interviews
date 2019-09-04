@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(09_QueueWithTwoStacks_std 09_QueueWithTwoStacks_std.cpp)
+add_executable(09_QueueWithTwoStacks_std_debug 09_QueueWithTwoStacks_std_debug.cpp)
+add_executable(09_QueueWithTwoStacks_practise 09_QueueWithTwoStacks_practise.cpp)
+add_executable(Solutions09_Queue Solutions.cpp)

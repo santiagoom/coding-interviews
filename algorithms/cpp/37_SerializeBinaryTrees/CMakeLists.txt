@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(37_SerializeBinaryTrees_std 37_SerializeBinaryTrees_std.cpp)
+add_executable(37_SerializeBinaryTrees_std_debug 37_SerializeBinaryTrees_std_debug.cpp)
+add_executable(37_SerializeBinaryTrees_practise 37_SerializeBinaryTrees_practise.cpp)
+add_executable(Solutions37_Seria Solutions.cpp)
