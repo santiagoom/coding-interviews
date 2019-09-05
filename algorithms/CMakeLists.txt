@@ -3,6 +3,8 @@ project(coding-interviews-algo)
 
 set(CMAKE_CXX_STANDARD 14)
 
+
+
 add_subdirectory(cpp/22_KthNodeFromEnd)
 add_subdirectory(cpp/11_MinNumberInRotatedArray)
 add_subdirectory(cpp/67_StringToInt)
@@ -42,7 +44,7 @@ add_subdirectory(cpp/63_MaximalProfit)
 add_subdirectory(cpp/06_PrintListInReversedOrder)
 add_subdirectory(cpp/58_01_ReverseWordsInSentence)
 add_subdirectory(cpp/07_ConstructBinaryTree)
-add_subdirectory(cpp/Utilities)
+#add_subdirectory(cpp/Utilities)
 add_subdirectory(cpp/05_ReplaceSpaces)
 add_subdirectory(cpp/04_FindInPartiallySortedMatrix)
 add_subdirectory(cpp/18_02_DeleteDuplicatedNode)

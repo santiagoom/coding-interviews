@@ -3,7 +3,24 @@ project(CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(25_MergeSortedLists_std 25_MergeSortedLists_std.cpp)
-add_executable(25_MergeSortedLists_std_debug 25_MergeSortedLists_std_debug.cpp)
-add_executable(25_MergeSortedLists_practise 25_MergeSortedLists_practise.cpp)
-add_executable(Solutions25_Merge Solutions.cpp)
+file(GLOB SOURCES
+        ../Utilities/Array.h
+        ../Utilities/Array.cpp
+
+        ../Utilities/BinaryTree.h
+        ../Utilities/BinaryTree.cpp
+
+        ../Utilities/List.h
+        ../Utilities/List.cpp
+
+        ../Utilities/StringUtil.h
+        ../Utilities/StringUtil.cpp
+
+        ../Utilities/Tree.h
+        ../Utilities/Tree.cpp
+        )
+
+add_executable(25_MergeSortedLists_std 25_MergeSortedLists_std.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(25_MergeSortedLists_std_debug 25_MergeSortedLists_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(25_MergeSortedLists_practise 25_MergeSortedLists_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(Solutions25_Merge Solutions.cpp ${SOURCE_FILES} ${SOURCES})

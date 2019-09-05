@@ -3,7 +3,24 @@ project(CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(32_03_PrintTreesInZigzag_std 32_03_PrintTreesInZigzag_std.cpp)
-add_executable(32_03_PrintTreesInZigzag_std_debug 32_03_PrintTreesInZigzag_std_debug.cpp)
-add_executable(32_03_PrintTreesInZigzag_practise 32_03_PrintTreesInZigzag_practise.cpp)
-add_executable(Solutions32_03_Pr Solutions.cpp)
+file(GLOB SOURCES
+        ../Utilities/Array.h
+        ../Utilities/Array.cpp
+
+        ../Utilities/BinaryTree.h
+        ../Utilities/BinaryTree.cpp
+
+        ../Utilities/List.h
+        ../Utilities/List.cpp
+
+        ../Utilities/StringUtil.h
+        ../Utilities/StringUtil.cpp
+
+        ../Utilities/Tree.h
+        ../Utilities/Tree.cpp
+        )
+
+add_executable(32_03_PrintTreesInZigzag_std 32_03_PrintTreesInZigzag_std.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(32_03_PrintTreesInZigzag_std_debug 32_03_PrintTreesInZigzag_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(32_03_PrintTreesInZigzag_practise 32_03_PrintTreesInZigzag_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(Solutions32_03_Pr Solutions.cpp ${SOURCE_FILES} ${SOURCES})

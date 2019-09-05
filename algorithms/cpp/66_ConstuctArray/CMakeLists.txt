@@ -3,7 +3,24 @@ project(CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(66_ConstuctArray_std 66_ConstuctArray_std.cpp)
-add_executable(66_ConstuctArray_std_debug 66_ConstuctArray_std_debug.cpp)
-add_executable(66_ConstuctArray_practise 66_ConstuctArray_practise.cpp)
-add_executable(Solutions66_Const Solutions.cpp)
+file(GLOB SOURCES
+        ../Utilities/Array.h
+        ../Utilities/Array.cpp
+
+        ../Utilities/BinaryTree.h
+        ../Utilities/BinaryTree.cpp
+
+        ../Utilities/List.h
+        ../Utilities/List.cpp
+
+        ../Utilities/StringUtil.h
+        ../Utilities/StringUtil.cpp
+
+        ../Utilities/Tree.h
+        ../Utilities/Tree.cpp
+        )
+
+add_executable(66_ConstuctArray_std 66_ConstuctArray_std.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(66_ConstuctArray_std_debug 66_ConstuctArray_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(66_ConstuctArray_practise 66_ConstuctArray_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(Solutions66_Const Solutions.cpp ${SOURCE_FILES} ${SOURCES})

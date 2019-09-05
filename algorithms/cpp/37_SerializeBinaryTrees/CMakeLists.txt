@@ -3,7 +3,24 @@ project(CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(37_SerializeBinaryTrees_std 37_SerializeBinaryTrees_std.cpp)
-add_executable(37_SerializeBinaryTrees_std_debug 37_SerializeBinaryTrees_std_debug.cpp)
-add_executable(37_SerializeBinaryTrees_practise 37_SerializeBinaryTrees_practise.cpp)
-add_executable(Solutions37_Seria Solutions.cpp)
+file(GLOB SOURCES
+        ../Utilities/Array.h
+        ../Utilities/Array.cpp
+
+        ../Utilities/BinaryTree.h
+        ../Utilities/BinaryTree.cpp
+
+        ../Utilities/List.h
+        ../Utilities/List.cpp
+
+        ../Utilities/StringUtil.h
+        ../Utilities/StringUtil.cpp
+
+        ../Utilities/Tree.h
+        ../Utilities/Tree.cpp
+        )
+
+add_executable(37_SerializeBinaryTrees_std 37_SerializeBinaryTrees_std.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(37_SerializeBinaryTrees_std_debug 37_SerializeBinaryTrees_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(37_SerializeBinaryTrees_practise 37_SerializeBinaryTrees_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(Solutions37_Seria Solutions.cpp ${SOURCE_FILES} ${SOURCES})

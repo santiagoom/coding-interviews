@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.14)
+project(CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(04_FindInPartiallySortedMatrix_std 04_FindInPartiallySortedMatrix_std.cpp)
+add_executable(04_FindInPartiallySortedMatrix_std_debug 04_FindInPartiallySortedMatrix_std_debug.cpp)
+add_executable(04_FindInPartiallySortedMatrix_practise 04_FindInPartiallySortedMatrix_practise.cpp)
+add_executable(Solutions04_FindI Solutions.cpp)
