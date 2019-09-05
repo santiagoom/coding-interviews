@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(63_MaximalProfit_std 63_MaximalProfit_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(63_MaximalProfit_std_debug 63_MaximalProfit_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(63_MaximalProfit_practise 63_MaximalProfit_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(63_MaximalProfit_practise_test 63_MaximalProfit_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions63_Maxim Solutions.cpp ${SOURCE_FILES} ${SOURCES})

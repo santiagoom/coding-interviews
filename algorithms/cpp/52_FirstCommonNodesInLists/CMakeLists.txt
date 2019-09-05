@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(52_FirstCommonNodesInLists_std 52_FirstCommonNodesInLists_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(52_FirstCommonNodesInLists_std_debug 52_FirstCommonNodesInLists_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(52_FirstCommonNodesInLists_practise 52_FirstCommonNodesInLists_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(52_FirstCommonNodesInLists_practise_test 52_FirstCommonNodesInLists_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions52_First Solutions.cpp ${SOURCE_FILES} ${SOURCES})

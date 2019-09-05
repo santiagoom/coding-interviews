@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(19_RegularExpressionsMatching_std 19_RegularExpressionsMatching_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(19_RegularExpressionsMatching_std_debug 19_RegularExpressionsMatching_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(19_RegularExpressionsMatching_practise 19_RegularExpressionsMatching_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(19_RegularExpressionsMatching_practise_test 19_RegularExpressionsMatching_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions19_Regul Solutions.cpp ${SOURCE_FILES} ${SOURCES})

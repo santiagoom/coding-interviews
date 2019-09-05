@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(42_GreatestSumOfSubarrays_std 42_GreatestSumOfSubarrays_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(42_GreatestSumOfSubarrays_std_debug 42_GreatestSumOfSubarrays_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(42_GreatestSumOfSubarrays_practise 42_GreatestSumOfSubarrays_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(42_GreatestSumOfSubarrays_practise_test 42_GreatestSumOfSubarrays_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions42_Great Solutions.cpp ${SOURCE_FILES} ${SOURCES})

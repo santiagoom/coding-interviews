@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(43_NumberOf1_std 43_NumberOf1_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(43_NumberOf1_std_debug 43_NumberOf1_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(43_NumberOf1_practise 43_NumberOf1_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(43_NumberOf1_practise_test 43_NumberOf1_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions43_Numbe Solutions.cpp ${SOURCE_FILES} ${SOURCES})

@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(62_LastNumberInCircle_std 62_LastNumberInCircle_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(62_LastNumberInCircle_std_debug 62_LastNumberInCircle_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(62_LastNumberInCircle_practise 62_LastNumberInCircle_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(62_LastNumberInCircle_practise_test 62_LastNumberInCircle_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions62_LastN Solutions.cpp ${SOURCE_FILES} ${SOURCES})

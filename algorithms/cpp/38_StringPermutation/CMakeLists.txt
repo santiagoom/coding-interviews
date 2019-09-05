@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(38_StringPermutation_std 38_StringPermutation_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(38_StringPermutation_std_debug 38_StringPermutation_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(38_StringPermutation_practise 38_StringPermutation_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(38_StringPermutation_practise_test 38_StringPermutation_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions38_Strin Solutions.cpp ${SOURCE_FILES} ${SOURCES})

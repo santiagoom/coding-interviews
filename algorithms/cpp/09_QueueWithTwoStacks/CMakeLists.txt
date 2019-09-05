@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(09_QueueWithTwoStacks_std 09_QueueWithTwoStacks_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(09_QueueWithTwoStacks_std_debug 09_QueueWithTwoStacks_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(09_QueueWithTwoStacks_practise 09_QueueWithTwoStacks_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(09_QueueWithTwoStacks_practise_test 09_QueueWithTwoStacks_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions09_Queue Solutions.cpp ${SOURCE_FILES} ${SOURCES})

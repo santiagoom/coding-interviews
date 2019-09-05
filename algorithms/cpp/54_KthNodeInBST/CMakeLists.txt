@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(54_KthNodeInBST_std 54_KthNodeInBST_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(54_KthNodeInBST_std_debug 54_KthNodeInBST_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(54_KthNodeInBST_practise 54_KthNodeInBST_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(54_KthNodeInBST_practise_test 54_KthNodeInBST_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions54_KthNo Solutions.cpp ${SOURCE_FILES} ${SOURCES})

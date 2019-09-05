@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(33_SquenceOfBST_std 33_SquenceOfBST_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(33_SquenceOfBST_std_debug 33_SquenceOfBST_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(33_SquenceOfBST_practise 33_SquenceOfBST_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(33_SquenceOfBST_practise_test 33_SquenceOfBST_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions33_Squen Solutions.cpp ${SOURCE_FILES} ${SOURCES})

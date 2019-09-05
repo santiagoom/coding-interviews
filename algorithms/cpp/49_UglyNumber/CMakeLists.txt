@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(49_UglyNumber_std 49_UglyNumber_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(49_UglyNumber_std_debug 49_UglyNumber_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(49_UglyNumber_practise 49_UglyNumber_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(49_UglyNumber_practise_test 49_UglyNumber_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions49_UglyN Solutions.cpp ${SOURCE_FILES} ${SOURCES})

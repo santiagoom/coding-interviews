@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(55_02_BalancedBinaryTree_std 55_02_BalancedBinaryTree_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(55_02_BalancedBinaryTree_std_debug 55_02_BalancedBinaryTree_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(55_02_BalancedBinaryTree_practise 55_02_BalancedBinaryTree_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(55_02_BalancedBinaryTree_practise_test 55_02_BalancedBinaryTree_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions55_02_Ba Solutions.cpp ${SOURCE_FILES} ${SOURCES})

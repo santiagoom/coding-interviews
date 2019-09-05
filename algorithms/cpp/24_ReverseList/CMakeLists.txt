@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(24_ReverseList_std 24_ReverseList_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(24_ReverseList_std_debug 24_ReverseList_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(24_ReverseList_practise 24_ReverseList_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(24_ReverseList_practise_test 24_ReverseList_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions24_Rever Solutions.cpp ${SOURCE_FILES} ${SOURCES})

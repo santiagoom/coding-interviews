@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(58_01_ReverseWordsInSentence_std 58_01_ReverseWordsInSentence_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(58_01_ReverseWordsInSentence_std_debug 58_01_ReverseWordsInSentence_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(58_01_ReverseWordsInSentence_practise 58_01_ReverseWordsInSentence_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(58_01_ReverseWordsInSentence_practise_test 58_01_ReverseWordsInSentence_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions58_01_Re Solutions.cpp ${SOURCE_FILES} ${SOURCES})

@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(29_PrintMatrix_std 29_PrintMatrix_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(29_PrintMatrix_std_debug 29_PrintMatrix_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(29_PrintMatrix_practise 29_PrintMatrix_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(29_PrintMatrix_practise_test 29_PrintMatrix_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions29_Print Solutions.cpp ${SOURCE_FILES} ${SOURCES})

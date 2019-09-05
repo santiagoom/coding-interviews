@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(58_02_LeftRotateString_std 58_02_LeftRotateString_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(58_02_LeftRotateString_std_debug 58_02_LeftRotateString_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(58_02_LeftRotateString_practise 58_02_LeftRotateString_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(58_02_LeftRotateString_practise_test 58_02_LeftRotateString_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions58_02_Le Solutions.cpp ${SOURCE_FILES} ${SOURCES})

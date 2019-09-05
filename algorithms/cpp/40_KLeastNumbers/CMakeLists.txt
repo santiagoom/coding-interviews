@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(40_KLeastNumbers_std 40_KLeastNumbers_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(40_KLeastNumbers_std_debug 40_KLeastNumbers_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(40_KLeastNumbers_practise 40_KLeastNumbers_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(40_KLeastNumbers_practise_test 40_KLeastNumbers_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions40_KLeas Solutions.cpp ${SOURCE_FILES} ${SOURCES})

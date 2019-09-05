@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(57_01_TwoNumbersWithSum_std 57_01_TwoNumbersWithSum_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(57_01_TwoNumbersWithSum_std_debug 57_01_TwoNumbersWithSum_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(57_01_TwoNumbersWithSum_practise 57_01_TwoNumbersWithSum_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(57_01_TwoNumbersWithSum_practise_test 57_01_TwoNumbersWithSum_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions57_01_Tw Solutions.cpp ${SOURCE_FILES} ${SOURCES})

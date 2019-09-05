@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(32_03_PrintTreesInZigzag_std 32_03_PrintTreesInZigzag_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(32_03_PrintTreesInZigzag_std_debug 32_03_PrintTreesInZigzag_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(32_03_PrintTreesInZigzag_practise 32_03_PrintTreesInZigzag_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(32_03_PrintTreesInZigzag_practise_test 32_03_PrintTreesInZigzag_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions32_03_Pr Solutions.cpp ${SOURCE_FILES} ${SOURCES})

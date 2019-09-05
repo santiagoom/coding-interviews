@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(20_NumericStrings_std 20_NumericStrings_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(20_NumericStrings_std_debug 20_NumericStrings_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(20_NumericStrings_practise 20_NumericStrings_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(20_NumericStrings_practise_test 20_NumericStrings_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions20_Numer Solutions.cpp ${SOURCE_FILES} ${SOURCES})

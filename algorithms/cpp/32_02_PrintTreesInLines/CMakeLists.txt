@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(32_02_PrintTreesInLines_std 32_02_PrintTreesInLines_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(32_02_PrintTreesInLines_std_debug 32_02_PrintTreesInLines_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(32_02_PrintTreesInLines_practise 32_02_PrintTreesInLines_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(32_02_PrintTreesInLines_practise_test 32_02_PrintTreesInLines_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions32_02_Pr Solutions.cpp ${SOURCE_FILES} ${SOURCES})

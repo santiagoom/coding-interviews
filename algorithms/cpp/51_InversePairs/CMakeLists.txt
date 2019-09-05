@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(51_InversePairs_std 51_InversePairs_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(51_InversePairs_std_debug 51_InversePairs_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(51_InversePairs_practise 51_InversePairs_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(51_InversePairs_practise_test 51_InversePairs_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions51_Inver Solutions.cpp ${SOURCE_FILES} ${SOURCES})

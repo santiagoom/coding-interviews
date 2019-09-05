@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(47_MaxValueOfGifts_std 47_MaxValueOfGifts_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(47_MaxValueOfGifts_std_debug 47_MaxValueOfGifts_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(47_MaxValueOfGifts_practise 47_MaxValueOfGifts_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(47_MaxValueOfGifts_practise_test 47_MaxValueOfGifts_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions47_MaxVa Solutions.cpp ${SOURCE_FILES} ${SOURCES})

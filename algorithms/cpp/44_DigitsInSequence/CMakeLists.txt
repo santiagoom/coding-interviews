@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(44_DigitsInSequence_std 44_DigitsInSequence_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(44_DigitsInSequence_std_debug 44_DigitsInSequence_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(44_DigitsInSequence_practise 44_DigitsInSequence_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(44_DigitsInSequence_practise_test 44_DigitsInSequence_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions44_Digit Solutions.cpp ${SOURCE_FILES} ${SOURCES})

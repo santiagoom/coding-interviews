@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(64_Accumulate_std 64_Accumulate_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(64_Accumulate_std_debug 64_Accumulate_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(64_Accumulate_practise 64_Accumulate_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(64_Accumulate_practise_test 64_Accumulate_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions64_Accum Solutions.cpp ${SOURCE_FILES} ${SOURCES})

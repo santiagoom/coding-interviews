@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(68_CommonParentInTree_std 68_CommonParentInTree_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(68_CommonParentInTree_std_debug 68_CommonParentInTree_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(68_CommonParentInTree_practise 68_CommonParentInTree_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(68_CommonParentInTree_practise_test 68_CommonParentInTree_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions68_Commo Solutions.cpp ${SOURCE_FILES} ${SOURCES})

@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(27_MirrorOfBinaryTree_std 27_MirrorOfBinaryTree_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(27_MirrorOfBinaryTree_std_debug 27_MirrorOfBinaryTree_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(27_MirrorOfBinaryTree_practise 27_MirrorOfBinaryTree_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(27_MirrorOfBinaryTree_practise_test 27_MirrorOfBinaryTree_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions27_Mirro Solutions.cpp ${SOURCE_FILES} ${SOURCES})

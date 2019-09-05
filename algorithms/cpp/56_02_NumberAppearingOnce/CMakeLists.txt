@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(56_02_NumberAppearingOnce_std 56_02_NumberAppearingOnce_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(56_02_NumberAppearingOnce_std_debug 56_02_NumberAppearingOnce_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(56_02_NumberAppearingOnce_practise 56_02_NumberAppearingOnce_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(56_02_NumberAppearingOnce_practise_test 56_02_NumberAppearingOnce_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions56_02_Nu Solutions.cpp ${SOURCE_FILES} ${SOURCES})

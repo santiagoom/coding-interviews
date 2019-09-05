@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(36_ConvertBinarySearchTree_std 36_ConvertBinarySearchTree_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(36_ConvertBinarySearchTree_std_debug 36_ConvertBinarySearchTree_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(36_ConvertBinarySearchTree_practise 36_ConvertBinarySearchTree_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(36_ConvertBinarySearchTree_practise_test 36_ConvertBinarySearchTree_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions36_Conve Solutions.cpp ${SOURCE_FILES} ${SOURCES})

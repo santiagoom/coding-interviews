@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(67_StringToInt_std 67_StringToInt_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(67_StringToInt_std_debug 67_StringToInt_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(67_StringToInt_practise 67_StringToInt_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(67_StringToInt_practise_test 67_StringToInt_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions67_Strin Solutions.cpp ${SOURCE_FILES} ${SOURCES})

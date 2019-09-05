@@ -3,8 +3,25 @@ project(CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(03_01_DuplicationInArray_std 03_01_DuplicationInArray_std.cpp)
-add_executable(03_01_DuplicationInArray_std_debug 03_01_DuplicationInArray_std_debug.cpp)
-add_executable(03_01_DuplicationInArray_practise 03_01_DuplicationInArray_practise.cpp)
-add_executable(03_01_DuplicationInArray_practise_test 03_01_DuplicationInArray_practise_test.cpp)
-add_executable(Solutions03_01_Du Solutions.cpp)
+file(GLOB SOURCES
+        ../Utilities/Array.h
+        ../Utilities/Array.cpp
+
+        ../Utilities/BinaryTree.h
+        ../Utilities/BinaryTree.cpp
+
+        ../Utilities/List.h
+        ../Utilities/List.cpp
+
+        ../Utilities/StringUtil.h
+        ../Utilities/StringUtil.cpp
+
+        ../Utilities/Tree.h
+        ../Utilities/Tree.cpp
+        )
+
+add_executable(03_01_DuplicationInArray_std 03_01_DuplicationInArray_std.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(03_01_DuplicationInArray_std_debug 03_01_DuplicationInArray_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(03_01_DuplicationInArray_practise 03_01_DuplicationInArray_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(03_01_DuplicationInArray_practise_test 03_01_DuplicationInArray_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(Solutions03_01_Du Solutions.cpp ${SOURCE_FILES} ${SOURCES})

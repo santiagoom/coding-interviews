@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(32_01_PrintTreeFromTopToBottom_std 32_01_PrintTreeFromTopToBottom_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(32_01_PrintTreeFromTopToBottom_std_debug 32_01_PrintTreeFromTopToBottom_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(32_01_PrintTreeFromTopToBottom_practise 32_01_PrintTreeFromTopToBottom_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(32_01_PrintTreeFromTopToBottom_practise_test 32_01_PrintTreeFromTopToBottom_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions32_01_Pr Solutions.cpp ${SOURCE_FILES} ${SOURCES})

@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(17_Print1ToMaxOfNDigits_std 17_Print1ToMaxOfNDigits_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(17_Print1ToMaxOfNDigits_std_debug 17_Print1ToMaxOfNDigits_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(17_Print1ToMaxOfNDigits_practise 17_Print1ToMaxOfNDigits_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(17_Print1ToMaxOfNDigits_practise_test 17_Print1ToMaxOfNDigits_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions17_Print Solutions.cpp ${SOURCE_FILES} ${SOURCES})

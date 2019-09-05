@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(59_02_QueueWithMax_std 59_02_QueueWithMax_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(59_02_QueueWithMax_std_debug 59_02_QueueWithMax_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(59_02_QueueWithMax_practise 59_02_QueueWithMax_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(59_02_QueueWithMax_practise_test 59_02_QueueWithMax_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions59_02_Qu Solutions.cpp ${SOURCE_FILES} ${SOURCES})

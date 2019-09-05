@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(35_CopyComplexList_std 35_CopyComplexList_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(35_CopyComplexList_std_debug 35_CopyComplexList_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(35_CopyComplexList_practise 35_CopyComplexList_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(35_CopyComplexList_practise_test 35_CopyComplexList_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions35_CopyC Solutions.cpp ${SOURCE_FILES} ${SOURCES})

@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(16_Power_std 16_Power_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(16_Power_std_debug 16_Power_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(16_Power_practise 16_Power_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(16_Power_practise_test 16_Power_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions16_Power Solutions.cpp ${SOURCE_FILES} ${SOURCES})

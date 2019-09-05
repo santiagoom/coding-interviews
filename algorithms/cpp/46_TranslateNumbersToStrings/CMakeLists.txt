@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(46_TranslateNumbersToStrings_std 46_TranslateNumbersToStrings_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(46_TranslateNumbersToStrings_std_debug 46_TranslateNumbersToStrings_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(46_TranslateNumbersToStrings_practise 46_TranslateNumbersToStrings_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(46_TranslateNumbersToStrings_practise_test 46_TranslateNumbersToStrings_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions46_Trans Solutions.cpp ${SOURCE_FILES} ${SOURCES})

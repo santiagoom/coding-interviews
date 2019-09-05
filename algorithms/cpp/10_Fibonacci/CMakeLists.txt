@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(10_Fibonacci_std 10_Fibonacci_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(10_Fibonacci_std_debug 10_Fibonacci_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(10_Fibonacci_practise 10_Fibonacci_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(10_Fibonacci_practise_test 10_Fibonacci_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions10_Fibon Solutions.cpp ${SOURCE_FILES} ${SOURCES})

@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(22_KthNodeFromEnd_std 22_KthNodeFromEnd_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(22_KthNodeFromEnd_std_debug 22_KthNodeFromEnd_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(22_KthNodeFromEnd_practise 22_KthNodeFromEnd_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(22_KthNodeFromEnd_practise_test 22_KthNodeFromEnd_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions22_KthNo Solutions.cpp ${SOURCE_FILES} ${SOURCES})

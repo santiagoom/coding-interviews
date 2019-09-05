@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(11_MinNumberInRotatedArray_std 11_MinNumberInRotatedArray_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(11_MinNumberInRotatedArray_std_debug 11_MinNumberInRotatedArray_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(11_MinNumberInRotatedArray_practise 11_MinNumberInRotatedArray_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(11_MinNumberInRotatedArray_practise_test 11_MinNumberInRotatedArray_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions11_MinNu Solutions.cpp ${SOURCE_FILES} ${SOURCES})

@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(45_SortArrayForMinNumber_std 45_SortArrayForMinNumber_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(45_SortArrayForMinNumber_std_debug 45_SortArrayForMinNumber_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(45_SortArrayForMinNumber_practise 45_SortArrayForMinNumber_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(45_SortArrayForMinNumber_practise_test 45_SortArrayForMinNumber_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions45_SortA Solutions.cpp ${SOURCE_FILES} ${SOURCES})

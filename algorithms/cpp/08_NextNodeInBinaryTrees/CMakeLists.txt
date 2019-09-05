@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(08_NextNodeInBinaryTrees_std 08_NextNodeInBinaryTrees_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(08_NextNodeInBinaryTrees_std_debug 08_NextNodeInBinaryTrees_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(08_NextNodeInBinaryTrees_practise 08_NextNodeInBinaryTrees_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(08_NextNodeInBinaryTrees_practise_test 08_NextNodeInBinaryTrees_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions08_NextN Solutions.cpp ${SOURCE_FILES} ${SOURCES})

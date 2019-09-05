@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(48_LongestSubstringWithoutDup_std 48_LongestSubstringWithoutDup_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(48_LongestSubstringWithoutDup_std_debug 48_LongestSubstringWithoutDup_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(48_LongestSubstringWithoutDup_practise 48_LongestSubstringWithoutDup_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(48_LongestSubstringWithoutDup_practise_test 48_LongestSubstringWithoutDup_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions48_Longe Solutions.cpp ${SOURCE_FILES} ${SOURCES})

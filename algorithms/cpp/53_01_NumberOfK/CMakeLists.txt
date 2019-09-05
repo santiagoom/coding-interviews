@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(53_01_NumberOfK_std 53_01_NumberOfK_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(53_01_NumberOfK_std_debug 53_01_NumberOfK_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(53_01_NumberOfK_practise 53_01_NumberOfK_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(53_01_NumberOfK_practise_test 53_01_NumberOfK_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions53_01_Nu Solutions.cpp ${SOURCE_FILES} ${SOURCES})

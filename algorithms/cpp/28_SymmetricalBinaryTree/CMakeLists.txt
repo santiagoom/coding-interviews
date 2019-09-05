@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(28_SymmetricalBinaryTree_std 28_SymmetricalBinaryTree_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(28_SymmetricalBinaryTree_std_debug 28_SymmetricalBinaryTree_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(28_SymmetricalBinaryTree_practise 28_SymmetricalBinaryTree_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(28_SymmetricalBinaryTree_practise_test 28_SymmetricalBinaryTree_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions28_Symme Solutions.cpp ${SOURCE_FILES} ${SOURCES})

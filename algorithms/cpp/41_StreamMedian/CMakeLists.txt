@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(41_StreamMedian_std 41_StreamMedian_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(41_StreamMedian_std_debug 41_StreamMedian_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(41_StreamMedian_practise 41_StreamMedian_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(41_StreamMedian_practise_test 41_StreamMedian_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions41_Strea Solutions.cpp ${SOURCE_FILES} ${SOURCES})

@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(53_02_MissingNumber_std 53_02_MissingNumber_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(53_02_MissingNumber_std_debug 53_02_MissingNumber_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(53_02_MissingNumber_practise 53_02_MissingNumber_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(53_02_MissingNumber_practise_test 53_02_MissingNumber_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions53_02_Mi Solutions.cpp ${SOURCE_FILES} ${SOURCES})

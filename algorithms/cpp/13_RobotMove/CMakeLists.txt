@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(13_RobotMove_std 13_RobotMove_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(13_RobotMove_std_debug 13_RobotMove_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(13_RobotMove_practise 13_RobotMove_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(13_RobotMove_practise_test 13_RobotMove_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions13_Robot Solutions.cpp ${SOURCE_FILES} ${SOURCES})

@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(12_StringPathInMatrix_std 12_StringPathInMatrix_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(12_StringPathInMatrix_std_debug 12_StringPathInMatrix_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(12_StringPathInMatrix_practise 12_StringPathInMatrix_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(12_StringPathInMatrix_practise_test 12_StringPathInMatrix_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions12_Strin Solutions.cpp ${SOURCE_FILES} ${SOURCES})

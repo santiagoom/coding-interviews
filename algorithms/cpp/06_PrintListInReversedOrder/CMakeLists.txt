@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(06_PrintListInReversedOrder_std 06_PrintListInReversedOrder_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(06_PrintListInReversedOrder_std_debug 06_PrintListInReversedOrder_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(06_PrintListInReversedOrder_practise 06_PrintListInReversedOrder_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(06_PrintListInReversedOrder_practise_test 06_PrintListInReversedOrder_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions06_Print Solutions.cpp ${SOURCE_FILES} ${SOURCES})

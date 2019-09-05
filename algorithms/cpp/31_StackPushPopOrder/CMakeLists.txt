@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(31_StackPushPopOrder_std 31_StackPushPopOrder_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(31_StackPushPopOrder_std_debug 31_StackPushPopOrder_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(31_StackPushPopOrder_practise 31_StackPushPopOrder_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(31_StackPushPopOrder_practise_test 31_StackPushPopOrder_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions31_Stack Solutions.cpp ${SOURCE_FILES} ${SOURCES})

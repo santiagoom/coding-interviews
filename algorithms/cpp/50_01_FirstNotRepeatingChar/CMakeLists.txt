@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(50_01_FirstNotRepeatingChar_std 50_01_FirstNotRepeatingChar_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(50_01_FirstNotRepeatingChar_std_debug 50_01_FirstNotRepeatingChar_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(50_01_FirstNotRepeatingChar_practise 50_01_FirstNotRepeatingChar_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(50_01_FirstNotRepeatingChar_practise_test 50_01_FirstNotRepeatingChar_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions50_01_Fi Solutions.cpp ${SOURCE_FILES} ${SOURCES})

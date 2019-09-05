@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(37_SerializeBinaryTrees_std 37_SerializeBinaryTrees_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(37_SerializeBinaryTrees_std_debug 37_SerializeBinaryTrees_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(37_SerializeBinaryTrees_practise 37_SerializeBinaryTrees_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(37_SerializeBinaryTrees_practise_test 37_SerializeBinaryTrees_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions37_Seria Solutions.cpp ${SOURCE_FILES} ${SOURCES})

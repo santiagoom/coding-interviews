@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(18_02_DeleteDuplicatedNode_std 18_02_DeleteDuplicatedNode_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(18_02_DeleteDuplicatedNode_std_debug 18_02_DeleteDuplicatedNode_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(18_02_DeleteDuplicatedNode_practise 18_02_DeleteDuplicatedNode_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(18_02_DeleteDuplicatedNode_practise_test 18_02_DeleteDuplicatedNode_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions18_02_De Solutions.cpp ${SOURCE_FILES} ${SOURCES})

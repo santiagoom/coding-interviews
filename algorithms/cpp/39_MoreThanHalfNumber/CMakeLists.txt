@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(39_MoreThanHalfNumber_std 39_MoreThanHalfNumber_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(39_MoreThanHalfNumber_std_debug 39_MoreThanHalfNumber_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(39_MoreThanHalfNumber_practise 39_MoreThanHalfNumber_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(39_MoreThanHalfNumber_practise_test 39_MoreThanHalfNumber_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions39_MoreT Solutions.cpp ${SOURCE_FILES} ${SOURCES})

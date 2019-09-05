@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(60_DicesProbability_std 60_DicesProbability_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(60_DicesProbability_std_debug 60_DicesProbability_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(60_DicesProbability_practise 60_DicesProbability_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(60_DicesProbability_practise_test 60_DicesProbability_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions60_Dices Solutions.cpp ${SOURCE_FILES} ${SOURCES})

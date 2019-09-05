@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(66_ConstuctArray_std 66_ConstuctArray_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(66_ConstuctArray_std_debug 66_ConstuctArray_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(66_ConstuctArray_practise 66_ConstuctArray_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(66_ConstuctArray_practise_test 66_ConstuctArray_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions66_Const Solutions.cpp ${SOURCE_FILES} ${SOURCES})

@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(14_CuttingRope_std 14_CuttingRope_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(14_CuttingRope_std_debug 14_CuttingRope_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(14_CuttingRope_practise 14_CuttingRope_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(14_CuttingRope_practise_test 14_CuttingRope_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions14_Cutti Solutions.cpp ${SOURCE_FILES} ${SOURCES})

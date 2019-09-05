@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(53_03_IntegerIdenticalToIndex_std 53_03_IntegerIdenticalToIndex_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(53_03_IntegerIdenticalToIndex_std_debug 53_03_IntegerIdenticalToIndex_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(53_03_IntegerIdenticalToIndex_practise 53_03_IntegerIdenticalToIndex_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(53_03_IntegerIdenticalToIndex_practise_test 53_03_IntegerIdenticalToIndex_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions53_03_In Solutions.cpp ${SOURCE_FILES} ${SOURCES})

@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(55_01_TreeDepth_std 55_01_TreeDepth_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(55_01_TreeDepth_std_debug 55_01_TreeDepth_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(55_01_TreeDepth_practise 55_01_TreeDepth_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(55_01_TreeDepth_practise_test 55_01_TreeDepth_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions55_01_Tr Solutions.cpp ${SOURCE_FILES} ${SOURCES})

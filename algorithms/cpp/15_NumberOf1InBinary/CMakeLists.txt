@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(15_NumberOf1InBinary_std 15_NumberOf1InBinary_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(15_NumberOf1InBinary_std_debug 15_NumberOf1InBinary_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(15_NumberOf1InBinary_practise 15_NumberOf1InBinary_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(15_NumberOf1InBinary_practise_test 15_NumberOf1InBinary_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions15_Numbe Solutions.cpp ${SOURCE_FILES} ${SOURCES})

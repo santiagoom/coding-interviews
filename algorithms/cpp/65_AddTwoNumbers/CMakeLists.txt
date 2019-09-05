@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(65_AddTwoNumbers_std 65_AddTwoNumbers_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(65_AddTwoNumbers_std_debug 65_AddTwoNumbers_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(65_AddTwoNumbers_practise 65_AddTwoNumbers_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(65_AddTwoNumbers_practise_test 65_AddTwoNumbers_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions65_AddTw Solutions.cpp ${SOURCE_FILES} ${SOURCES})

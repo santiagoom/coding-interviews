@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(18_01_DeleteNodeInList_std 18_01_DeleteNodeInList_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(18_01_DeleteNodeInList_std_debug 18_01_DeleteNodeInList_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(18_01_DeleteNodeInList_practise 18_01_DeleteNodeInList_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(18_01_DeleteNodeInList_practise_test 18_01_DeleteNodeInList_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions18_01_De Solutions.cpp ${SOURCE_FILES} ${SOURCES})

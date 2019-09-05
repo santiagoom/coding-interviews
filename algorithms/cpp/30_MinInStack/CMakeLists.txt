@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(30_MinInStack_std 30_MinInStack_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(30_MinInStack_std_debug 30_MinInStack_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(30_MinInStack_practise 30_MinInStack_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(30_MinInStack_practise_test 30_MinInStack_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions30_MinIn Solutions.cpp ${SOURCE_FILES} ${SOURCES})

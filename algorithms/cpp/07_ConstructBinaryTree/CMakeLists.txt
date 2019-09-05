@@ -18,9 +18,17 @@ file(GLOB SOURCES
 
         ../Utilities/Tree.h
         ../Utilities/Tree.cpp
+
+
+        ../utils/myListNode.h
+        ../utils/myListNode.cpp
+
+        ../utils/myTreeNode.h
+        ../utils/myTreeNode.cpp
         )
 
 add_executable(07_ConstructBinaryTree_std 07_ConstructBinaryTree_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(07_ConstructBinaryTree_std_debug 07_ConstructBinaryTree_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(07_ConstructBinaryTree_practise 07_ConstructBinaryTree_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(07_ConstructBinaryTree_practise_test 07_ConstructBinaryTree_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions07_Const Solutions.cpp ${SOURCE_FILES} ${SOURCES})

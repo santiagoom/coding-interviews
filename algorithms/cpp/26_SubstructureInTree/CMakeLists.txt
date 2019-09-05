@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(26_SubstructureInTree_std 26_SubstructureInTree_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(26_SubstructureInTree_std_debug 26_SubstructureInTree_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(26_SubstructureInTree_practise 26_SubstructureInTree_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(26_SubstructureInTree_practise_test 26_SubstructureInTree_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions26_Subst Solutions.cpp ${SOURCE_FILES} ${SOURCES})

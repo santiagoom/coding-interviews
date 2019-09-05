@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(59_01_MaxInSlidingWindow_std 59_01_MaxInSlidingWindow_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(59_01_MaxInSlidingWindow_std_debug 59_01_MaxInSlidingWindow_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(59_01_MaxInSlidingWindow_practise 59_01_MaxInSlidingWindow_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(59_01_MaxInSlidingWindow_practise_test 59_01_MaxInSlidingWindow_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions59_01_Ma Solutions.cpp ${SOURCE_FILES} ${SOURCES})

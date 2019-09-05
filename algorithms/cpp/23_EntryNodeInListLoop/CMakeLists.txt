@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(23_EntryNodeInListLoop_std 23_EntryNodeInListLoop_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(23_EntryNodeInListLoop_std_debug 23_EntryNodeInListLoop_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(23_EntryNodeInListLoop_practise 23_EntryNodeInListLoop_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(23_EntryNodeInListLoop_practise_test 23_EntryNodeInListLoop_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions23_Entry Solutions.cpp ${SOURCE_FILES} ${SOURCES})

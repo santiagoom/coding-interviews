@@ -23,4 +23,5 @@ file(GLOB SOURCES
 add_executable(61_ContinousCards_std 61_ContinousCards_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(61_ContinousCards_std_debug 61_ContinousCards_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(61_ContinousCards_practise 61_ContinousCards_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(61_ContinousCards_practise_test 61_ContinousCards_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions61_Conti Solutions.cpp ${SOURCE_FILES} ${SOURCES})
