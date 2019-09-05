@@ -29,34 +29,26 @@ BinaryTreeNode *GetNext(BinaryTreeNode *pNode) {
     if (!pNode)
         return nullptr;
 
-    BinaryTreeNode *curr = pNode;
-    BinaryTreeNode *par = curr->m_pParent;
+    BinaryTreeNode *next = nullptr;
 
-    if (curr->m_pRight) {
-        if (!curr->m_pRight->m_pLeft) {
-            return curr->m_pRight;
-        } else {
-            curr = curr->m_pRight;
-            while (curr) {
-                if (!curr->m_pLeft)
-                    return curr->m_pLeft;
-                curr = curr->m_pLeft;
-            }
-            return curr;
+    if (pNode->m_pRight) {
+        BinaryTreeNode *right = pNode->m_pRight;
+        while (right->m_pLeft) {
+            right = right->m_pLeft;
         }
+        next = right;
+    } else if (pNode->m_pParent) {
+        BinaryTreeNode *curr = pNode;
+        BinaryTreeNode *par = pNode->m_pParent;
+        while (par && curr == par->m_pRight) {
+            curr = curr->m_pParent;
+            par = par->m_pParent;
+        }
+        next = par;
     }
-
-    if (par && curr == par->m_pLeft)
-        return par;
-
-    while (par && curr == par->m_pRight) {
-        if (par->m_pParent && par == par->m_pParent->m_pLeft)
-            return par->m_pParent;
-        curr = curr->m_pParent;
-        par = par->m_pParent;
-    }
-    return nullptr;
+    return next;
 }
+
 
 
 // ==================== 辅助代码用来构建二叉树 ====================

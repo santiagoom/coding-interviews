@@ -1,20 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <cstdio>
-
-#include <iostream>
-//#include <myTreeNode.h>
-
-//#include "myTreeNode.h"
-#include "../utils/myTreeNode.h"
-
-
-#include <exception>
-#include <cstdio>
-
-#include <iostream>
-
-using namespace std;
+#include "myTreeNode.h"
 
 using namespace std;
 
@@ -26,8 +12,7 @@ public:
             return nullptr;
 
         int length = pre.size();
-        constructHelper(pre, 0, length - 1, vin, 0, length - 1);
-        return nullptr;
+        return constructHelper(pre, 0, length - 1, vin, 0, length - 1);
     }
 
 private:
@@ -62,14 +47,14 @@ private:
 
 int main() {
     auto *so = new Solution();
-    int length = 8;
 
     vector<int> pre{1, 2, 4, 7, 3, 5, 6, 8};
     vector<int> vin{4, 7, 2, 1, 5, 3, 8, 6};
 
     auto res = so->reConstructBinaryTree(pre, vin);
+    preorderTraversal(res);
+    cout << endl;
     inorderTraversal(res);
-    cout << "new file!" << endl;
     delete so;
     return 0;
 }

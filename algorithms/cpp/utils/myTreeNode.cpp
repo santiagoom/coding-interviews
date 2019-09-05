@@ -15,9 +15,9 @@ void inorderTraversal(TreeNode *root) {
 void preorderTraversal(TreeNode *root) {
     if (!root)
         return;
-    inorderTraversal(root->left);
     cout << root->val << " ";
-    inorderTraversal(root->right);
+    preorderTraversal(root->left);
+    preorderTraversal(root->right);
 
 }
 
@@ -25,9 +25,9 @@ void preorderTraversal(TreeNode *root) {
 void postorderTraversal(TreeNode *root) {
     if (!root)
         return;
-    inorderTraversal(root->left);
+    postorderTraversal(root->left);
+    postorderTraversal(root->right);
     cout << root->val << " ";
-    inorderTraversal(root->right);
 }
 
 
