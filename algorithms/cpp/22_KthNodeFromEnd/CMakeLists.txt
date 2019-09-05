@@ -18,6 +18,13 @@ file(GLOB SOURCES
 
         ../Utilities/Tree.h
         ../Utilities/Tree.cpp
+
+
+        ../utils/myListNode.h
+        ../utils/myListNode.cpp
+
+        ../utils/myTreeNode.h
+        ../utils/myTreeNode.cpp
         )
 
 add_executable(22_KthNodeFromEnd_std 22_KthNodeFromEnd_std.cpp ${SOURCE_FILES} ${SOURCES})

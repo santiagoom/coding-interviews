@@ -18,6 +18,13 @@ file(GLOB SOURCES
 
         ../Utilities/Tree.h
         ../Utilities/Tree.cpp
+
+
+        ../utils/myListNode.h
+        ../utils/myListNode.cpp
+
+        ../utils/myTreeNode.h
+        ../utils/myTreeNode.cpp
         )
 
 add_executable(57_01_TwoNumbersWithSum_std 57_01_TwoNumbersWithSum_std.cpp ${SOURCE_FILES} ${SOURCES})

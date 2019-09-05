@@ -18,6 +18,13 @@ file(GLOB SOURCES
 
         ../Utilities/Tree.h
         ../Utilities/Tree.cpp
+
+
+        ../utils/myListNode.h
+        ../utils/myListNode.cpp
+
+        ../utils/myTreeNode.h
+        ../utils/myTreeNode.cpp
         )
 
 add_executable(50_02_FirstCharacterInStream_std 50_02_FirstCharacterInStream_std.cpp ${SOURCE_FILES} ${SOURCES})

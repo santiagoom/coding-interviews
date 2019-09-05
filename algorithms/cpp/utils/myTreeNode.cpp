@@ -1,19 +1,33 @@
-//
-// Created by tianm on 2019-09-05.
-//
 #include <iostream>
-#include <cstdio>
 #include "myTreeNode.h"
 
-#include <cstdio>
+using namespace std;
+
+void inorderTraversal(TreeNode *root) {
+    if (!root)
+        return;
+    inorderTraversal(root->left);
+    cout << root->val << " ";
+    inorderTraversal(root->right);
+}
 
 
-
-TreeNode *inorderTraversal(TreeNode *root) {
-    if (root == nullptr)
+void preorderTraversal(TreeNode *root) {
+    if (!root)
         return;
     inorderTraversal(root->left);
     cout << root->val << " ";
     inorderTraversal(root->right);
 
 }
+
+
+void postorderTraversal(TreeNode *root) {
+    if (!root)
+        return;
+    inorderTraversal(root->left);
+    cout << root->val << " ";
+    inorderTraversal(root->right);
+}
+
+

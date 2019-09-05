@@ -27,8 +27,4 @@ file(GLOB SOURCES
         ../utils/myTreeNode.cpp
         )
 
-add_executable(25_MergeSortedLists_std 25_MergeSortedLists_std.cpp ${SOURCE_FILES} ${SOURCES})
-add_executable(25_MergeSortedLists_std_debug 25_MergeSortedLists_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
-add_executable(25_MergeSortedLists_practise 25_MergeSortedLists_practise.cpp ${SOURCE_FILES} ${SOURCES})
-add_executable(25_MergeSortedLists_practise_test 25_MergeSortedLists_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
-add_executable(Solutions25_Merge Solutions.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(myTreeNode_test myTreeNode_test.cpp ${SOURCE_FILES} ${SOURCES})

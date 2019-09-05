@@ -38,11 +38,6 @@
 06_PrintListInReversedOrder
 58_01_ReverseWordsInSentence
 07_ConstructBinaryTree
-Utilities
-Utilities
-Utilities
-Utilities
-Utilities
 05_ReplaceSpaces
 04_FindInPartiallySortedMatrix
 18_02_DeleteDuplicatedNode

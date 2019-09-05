@@ -6,6 +6,7 @@
 //#include <myTreeNode.cpp>
 
 #pragma once
+
 //Definition for a binary tree node.
 struct TreeNode {
     int val;
@@ -17,6 +18,11 @@ struct TreeNode {
 
 
 void inorderTraversal(TreeNode *root);
+
+void preorderTraversal(TreeNode *root);
+
+void postorderTraversal(TreeNode *root);
+
 
 
 //int main() {
