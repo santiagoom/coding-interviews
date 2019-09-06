@@ -19,16 +19,14 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 #include "Queue.h"
 
 // ====================测试代码====================
-void Test(char actual, char expected)
-{
-    if(actual == expected)
+void Test(char actual, char expected) {
+    if (actual == expected)
         printf("Test passed.\n");
     else
         printf("Test failed.\n");
 }
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char *argv[]) {
     CQueue<char> queue;
 
     queue.appendTail('a');
