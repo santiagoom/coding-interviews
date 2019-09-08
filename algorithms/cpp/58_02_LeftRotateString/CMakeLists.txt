@@ -25,6 +25,9 @@ file(GLOB SOURCES
 
         ../utils/myTreeNode.h
         ../utils/myTreeNode.cpp
+        
+        ../utils/myutils.h
+        ../utils/myutils.cpp
         )
 
 add_executable(58_02_LeftRotateString_std 58_02_LeftRotateString_std.cpp ${SOURCE_FILES} ${SOURCES})

@@ -25,6 +25,9 @@ file(GLOB SOURCES
 
         ../utils/myTreeNode.h
         ../utils/myTreeNode.cpp
+        
+        ../utils/myutils.h
+        ../utils/myutils.cpp
         )
 
 add_executable(45_SortArrayForMinNumber_std 45_SortArrayForMinNumber_std.cpp ${SOURCE_FILES} ${SOURCES})

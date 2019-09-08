@@ -25,6 +25,9 @@ file(GLOB SOURCES
 
         ../utils/myTreeNode.h
         ../utils/myTreeNode.cpp
+        
+        ../utils/myutils.h
+        ../utils/myutils.cpp
         )
 
 add_executable(55_02_BalancedBinaryTree_std 55_02_BalancedBinaryTree_std.cpp ${SOURCE_FILES} ${SOURCES})

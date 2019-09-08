@@ -25,6 +25,9 @@ file(GLOB SOURCES
 
         ../utils/myTreeNode.h
         ../utils/myTreeNode.cpp
+        
+        ../utils/myutils.h
+        ../utils/myutils.cpp
         )
 
 add_executable(44_DigitsInSequence_std 44_DigitsInSequence_std.cpp ${SOURCE_FILES} ${SOURCES})

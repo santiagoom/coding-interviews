@@ -25,6 +25,9 @@ file(GLOB SOURCES
 
         ../utils/myTreeNode.h
         ../utils/myTreeNode.cpp
+        
+        ../utils/myutils.h
+        ../utils/myutils.cpp
         )
 
 add_executable(18_02_DeleteDuplicatedNode_std 18_02_DeleteDuplicatedNode_std.cpp ${SOURCE_FILES} ${SOURCES})

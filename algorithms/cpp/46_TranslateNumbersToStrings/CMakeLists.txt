@@ -25,6 +25,9 @@ file(GLOB SOURCES
 
         ../utils/myTreeNode.h
         ../utils/myTreeNode.cpp
+        
+        ../utils/myutils.h
+        ../utils/myutils.cpp
         )
 
 add_executable(46_TranslateNumbersToStrings_std 46_TranslateNumbersToStrings_std.cpp ${SOURCE_FILES} ${SOURCES})

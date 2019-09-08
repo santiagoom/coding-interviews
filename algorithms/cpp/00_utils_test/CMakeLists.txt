@@ -28,3 +28,6 @@ file(GLOB SOURCES
         )
 
 add_executable(myTreeNode_test myTreeNode_test.cpp ${SOURCE_FILES} ${SOURCES})
+
+add_executable(test test.cpp)
+add_executable(test2 test2.cpp)

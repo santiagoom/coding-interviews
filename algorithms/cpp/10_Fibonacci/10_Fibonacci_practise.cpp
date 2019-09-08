@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <myutils.h>
 
 using namespace std;
 
@@ -45,12 +46,56 @@ public:
     }
 };
 
+class Solution_opt {
+public:
+    int jumpFloorII(int number) {
+        vector<int> dp(number + 1, 0);
+        return helper(number, dp);
+    }
+
+private:
+    int helper(int number, vector<int> &nums) {
+        int res = 0;
+        if (number == 0)
+            return 1;
+        if (0 != nums[number])
+            return nums[number];
+
+        for (int i = 1; i <= number; i++) {
+            res += helper(number - i, nums);
+            nums[number] = res;
+        }
+        return res;
+    }
+};
+
+class Solution3 {
+public:
+    int rectCover(int number) {
+        vector<int> dp(number + 1, 0);
+        if (0 >= number)
+            return 0;
+        if (1 == number)
+            return number;
+        if (2 == number)
+            return number;
+        dp[1] = 1;
+        dp[2] = 2;
+        for (int i = 3; i <= number; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+        return dp[number];
+    }
+};
+
 int main() {
-    auto *so = new Solution();
+//    auto *so = new Solution_();
+//    auto *so = new Solution_opt();
+    auto *so = new Solution3();
     int n = 10;
     for (int i = 0; i < n; i++) {
-        int res = so->Fibonacci(i);
-        cout << res << endl;
+        int res = so->rectCover(i);
+        print(res);
     }
     delete so;
     return 0;

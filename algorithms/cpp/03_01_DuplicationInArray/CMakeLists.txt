@@ -25,6 +25,9 @@ file(GLOB SOURCES
 
         ../utils/myTreeNode.h
         ../utils/myTreeNode.cpp
+        
+        ../utils/myutils.h
+        ../utils/myutils.cpp
         )
 
 add_executable(03_01_DuplicationInArray_std 03_01_DuplicationInArray_std.cpp ${SOURCE_FILES} ${SOURCES})

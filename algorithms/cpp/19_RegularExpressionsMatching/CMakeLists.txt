@@ -25,6 +25,9 @@ file(GLOB SOURCES
 
         ../utils/myTreeNode.h
         ../utils/myTreeNode.cpp
+        
+        ../utils/myutils.h
+        ../utils/myutils.cpp
         )
 
 add_executable(19_RegularExpressionsMatching_std 19_RegularExpressionsMatching_std.cpp ${SOURCE_FILES} ${SOURCES})

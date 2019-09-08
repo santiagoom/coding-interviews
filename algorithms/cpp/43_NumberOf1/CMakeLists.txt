@@ -25,6 +25,9 @@ file(GLOB SOURCES
 
         ../utils/myTreeNode.h
         ../utils/myTreeNode.cpp
+        
+        ../utils/myutils.h
+        ../utils/myutils.cpp
         )
 
 add_executable(43_NumberOf1_std 43_NumberOf1_std.cpp ${SOURCE_FILES} ${SOURCES})
