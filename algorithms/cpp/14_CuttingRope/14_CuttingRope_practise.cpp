@@ -5,7 +5,10 @@
 using namespace std;
 
 class Solution {
+public:
+    int cutRope(int number) {
 
+    }
 };
 
 int main() {
