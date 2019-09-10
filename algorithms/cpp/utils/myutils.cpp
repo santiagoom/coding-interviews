@@ -65,6 +65,14 @@ void print_2d_vector(vector<vector<int>> &vect) {
     }
 }
 
+void print_2d_vector(vector<vector<char>> &vect) {
+    for (auto &level:vect) {
+        for (char &ele:level)
+            cout << ele << " ";
+        cout << endl;
+    }
+}
+
 void print_2d_vector(vector<vector<string>> &vect) {
     for (auto &level:vect) {
         for (string &ele:level)

@@ -38,6 +38,8 @@ void print_1d_vector(vector<string> &vect);
 
 void print_2d_vector(vector<vector<int>> &vect);
 
+void print_2d_vector(vector<vector<char>> &vect);
+
 void print_2d_vector(vector<vector<string>> &vect);
 
 #endif //LEETCODE_ALGORITHMS_MYUTILS_H

@@ -19,55 +19,50 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 #include <cstdio>
 #include "../Utilities/list.h"
 
-ListNode* MeetingNode(ListNode* pHead)
-{
-    if(pHead == nullptr)
+ListNode *MeetingNode(ListNode *pHead) {
+    if (pHead == nullptr)
         return nullptr;
 
-    ListNode* pSlow = pHead->m_pNext;
-    if(pSlow == nullptr)
+    ListNode *pSlow = pHead->m_pNext;
+    if (pSlow == nullptr)
         return nullptr;
 
-    ListNode* pFast = pSlow->m_pNext;
-    while(pFast != nullptr && pSlow != nullptr)
-    {
-        if(pFast == pSlow)
+    ListNode *pFast = pSlow->m_pNext;
+    while (pFast != nullptr && pSlow != nullptr) {
+        if (pFast == pSlow)
             return pFast;
 
         pSlow = pSlow->m_pNext;
 
         pFast = pFast->m_pNext;
-        if(pFast != nullptr)
+        if (pFast != nullptr)
             pFast = pFast->m_pNext;
     }
 
     return nullptr;
 }
 
-ListNode* EntryNodeOfLoop(ListNode* pHead)
-{
-    ListNode* meetingNode = MeetingNode(pHead);
-    if(meetingNode == nullptr)
+ListNode *EntryNodeOfLoop(ListNode *pHead) {
+    ListNode *meetingNode = MeetingNode(pHead);
+    if (meetingNode == nullptr)
         return nullptr;
 
     // 得到环中结点的数目
     int nodesInLoop = 1;
-    ListNode* pNode1 = meetingNode;
-    while(pNode1->m_pNext != meetingNode)
-    {
+    ListNode *pNode1 = meetingNode;
+    while (pNode1->m_pNext != meetingNode) {
         pNode1 = pNode1->m_pNext;
         ++nodesInLoop;
     }
 
     // 先移动pNode1，次数为环中结点的数目
     pNode1 = pHead;
-    for(int i = 0; i < nodesInLoop; ++i)
+    for (int i = 0; i < nodesInLoop; ++i)
         pNode1 = pNode1->m_pNext;
 
     // 再移动pNode1和pNode2
-    ListNode* pNode2 = pHead;
-    while(pNode1 != pNode2)
-    {
+    ListNode *pNode2 = pHead;
+    while (pNode1 != pNode2) {
         pNode1 = pNode1->m_pNext;
         pNode2 = pNode2->m_pNext;
     }
@@ -76,21 +71,19 @@ ListNode* EntryNodeOfLoop(ListNode* pHead)
 }
 
 // ==================== Test Code ====================
-void Test(char* testName, ListNode* pHead, ListNode* entryNode)
-{
-    if(testName != nullptr)
+void Test(char *testName, ListNode *pHead, ListNode *entryNode) {
+    if (testName != nullptr)
         printf("%s begins: ", testName);
 
-    if(EntryNodeOfLoop(pHead) == entryNode)
+    if (EntryNodeOfLoop(pHead) == entryNode)
         printf("Passed.\n");
     else
         printf("FAILED.\n");
 }
 
 // A list has a node, without a loop
-void Test1()
-{
-    ListNode* pNode1 = CreateListNode(1);
+void Test1() {
+    ListNode *pNode1 = CreateListNode(1);
 
     Test("Test1", pNode1, nullptr);
 
@@ -98,9 +91,8 @@ void Test1()
 }
 
 // A list has a node, with a loop
-void Test2()
-{
-    ListNode* pNode1 = CreateListNode(1);
+void Test2() {
+    ListNode *pNode1 = CreateListNode(1);
     ConnectListNodes(pNode1, pNode1);
 
     Test("Test2", pNode1, pNode1);
@@ -110,13 +102,12 @@ void Test2()
 }
 
 // A list has multiple nodes, with a loop 
-void Test3()
-{
-    ListNode* pNode1 = CreateListNode(1);
-    ListNode* pNode2 = CreateListNode(2);
-    ListNode* pNode3 = CreateListNode(3);
-    ListNode* pNode4 = CreateListNode(4);
-    ListNode* pNode5 = CreateListNode(5);
+void Test3() {
+    ListNode *pNode1 = CreateListNode(1);
+    ListNode *pNode2 = CreateListNode(2);
+    ListNode *pNode3 = CreateListNode(3);
+    ListNode *pNode4 = CreateListNode(4);
+    ListNode *pNode5 = CreateListNode(5);
 
     ConnectListNodes(pNode1, pNode2);
     ConnectListNodes(pNode2, pNode3);
@@ -139,13 +130,12 @@ void Test3()
 }
 
 // A list has multiple nodes, with a loop 
-void Test4()
-{
-    ListNode* pNode1 = CreateListNode(1);
-    ListNode* pNode2 = CreateListNode(2);
-    ListNode* pNode3 = CreateListNode(3);
-    ListNode* pNode4 = CreateListNode(4);
-    ListNode* pNode5 = CreateListNode(5);
+void Test4() {
+    ListNode *pNode1 = CreateListNode(1);
+    ListNode *pNode2 = CreateListNode(2);
+    ListNode *pNode3 = CreateListNode(3);
+    ListNode *pNode4 = CreateListNode(4);
+    ListNode *pNode5 = CreateListNode(5);
 
     ConnectListNodes(pNode1, pNode2);
     ConnectListNodes(pNode2, pNode3);
@@ -168,13 +158,12 @@ void Test4()
 }
 
 // A list has multiple nodes, with a loop 
-void Test5()
-{
-    ListNode* pNode1 = CreateListNode(1);
-    ListNode* pNode2 = CreateListNode(2);
-    ListNode* pNode3 = CreateListNode(3);
-    ListNode* pNode4 = CreateListNode(4);
-    ListNode* pNode5 = CreateListNode(5);
+void Test5() {
+    ListNode *pNode1 = CreateListNode(1);
+    ListNode *pNode2 = CreateListNode(2);
+    ListNode *pNode3 = CreateListNode(3);
+    ListNode *pNode4 = CreateListNode(4);
+    ListNode *pNode5 = CreateListNode(5);
 
     ConnectListNodes(pNode1, pNode2);
     ConnectListNodes(pNode2, pNode3);
@@ -197,13 +186,12 @@ void Test5()
 }
 
 // A list has multiple nodes, without a loop 
-void Test6()
-{
-    ListNode* pNode1 = CreateListNode(1);
-    ListNode* pNode2 = CreateListNode(2);
-    ListNode* pNode3 = CreateListNode(3);
-    ListNode* pNode4 = CreateListNode(4);
-    ListNode* pNode5 = CreateListNode(5);
+void Test6() {
+    ListNode *pNode1 = CreateListNode(1);
+    ListNode *pNode2 = CreateListNode(2);
+    ListNode *pNode3 = CreateListNode(3);
+    ListNode *pNode4 = CreateListNode(4);
+    ListNode *pNode5 = CreateListNode(5);
 
     ConnectListNodes(pNode1, pNode2);
     ConnectListNodes(pNode2, pNode3);
@@ -216,13 +204,11 @@ void Test6()
 }
 
 // Empty list
-void Test7()
-{
+void Test7() {
     Test("Test7", nullptr, nullptr);
 }
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char *argv[]) {
     Test1();
     Test2();
     Test3();

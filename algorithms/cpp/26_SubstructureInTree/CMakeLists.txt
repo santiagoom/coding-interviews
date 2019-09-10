@@ -7,8 +7,8 @@ file(GLOB SOURCES
         ../Utilities/Array.h
         ../Utilities/Array.cpp
 
-        ../Utilities/BinaryTree.h
-        ../Utilities/BinaryTree.cpp
+#        ../Utilities/BinaryTree.h
+#        ../Utilities/BinaryTree.cpp
 
         ../Utilities/List.h
         ../Utilities/List.cpp
