@@ -90,11 +90,11 @@ public:
 
 int main() {
 //    auto *so = new Solution_();
-//    auto *so = new Solution_opt();
-    auto *so = new Solution3();
-    int n = 10;
+    auto *so = new Solution_opt();
+//    auto *so = new Solution3();
+    int n = 20;
     for (int i = 0; i < n; i++) {
-        int res = so->rectCover(i);
+        int res = so->jumpFloorII(i);
         print(res);
     }
     delete so;

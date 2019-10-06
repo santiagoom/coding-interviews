@@ -4,8 +4,8 @@ project(coding-interviews-algo)
 set(CMAKE_CXX_STANDARD 14)
 
 
-include_directories(cpp/utils)
-include_directories(cpp/Utilities)
+include_directories(cpp/cppUtils/utils)
+include_directories(cpp/cppUtils/Utilities)
 add_subdirectory(cpp/22_KthNodeFromEnd)
 add_subdirectory(cpp/11_MinNumberInRotatedArray)
 add_subdirectory(cpp/67_StringToInt)

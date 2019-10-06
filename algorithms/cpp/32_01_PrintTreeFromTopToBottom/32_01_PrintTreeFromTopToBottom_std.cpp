@@ -12,69 +12,151 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 // 作者：何海涛
 //==================================================================
 
-// 面试题57（二）：为s的连续正数序列
-// 题目：输入一个正数s，打印出所有和为s的连续正数序列（至少含有两个数）。
-// 例如输入15，由于1+2+3+4+5=4+5+6=7+8=15，所以结果打印出3个连续序列1～5、
-// 4～6和7～8。
+// 面试题32（一）：不分行从上往下打印二叉树
+// 题目：从上往下打印出二叉树的每个结点，同一层的结点按照从左到右的顺序打印。
 
 #include <cstdio>
+#include "../Utilities/BinaryTree.h"
+#include <deque>
 
-void PrintContinuousSequence(int small, int big);
-
-void FindContinuousSequence(int sum)
+void PrintFromTopToBottom(BinaryTreeNode* pRoot)
 {
-    if(sum < 3)
+    if(pRoot == nullptr)
         return;
 
-    int small = 1; 
-    int big = 2;
-    int middle = (1 + sum) / 2;
-    int curSum = small + big;
+    std::deque<BinaryTreeNode *> dequeTreeNode;
 
-    while(small < middle)
+    dequeTreeNode.push_back(pRoot);
+
+    while(dequeTreeNode.size())
     {
-        if(curSum == sum)
-            PrintContinuousSequence(small, big);
+        BinaryTreeNode *pNode = dequeTreeNode.front();
+        dequeTreeNode.pop_front();
 
-        while(curSum > sum && small < middle)
-        {
-            curSum -= small;
-            small ++;
+        printf("%d ", pNode->m_nValue);
 
-            if(curSum == sum)
-                PrintContinuousSequence(small, big);
-        }
+        if(pNode->m_pLeft)
+            dequeTreeNode.push_back(pNode->m_pLeft);
 
-        big ++;
-        curSum += big;
+        if(pNode->m_pRight)
+            dequeTreeNode.push_back(pNode->m_pRight);
     }
 }
 
-void PrintContinuousSequence(int small, int big)
-{
-    for(int i = small; i <= big; ++ i)
-        printf("%d ", i);
-
-    printf("\n");
-}
-
 // ====================测试代码====================
-void Test(const char* testName, int sum)
+void Test(char* testName, BinaryTreeNode* pRoot)
 {
     if(testName != nullptr)
-        printf("%s for %d begins: \n", testName, sum);
+        printf("%s begins: \n", testName);
 
-    FindContinuousSequence(sum);
+    PrintTree(pRoot);
+
+    printf("The nodes from top to bottom, from left to right are: \n");
+    PrintFromTopToBottom(pRoot);
+
+    printf("\n\n");
+}
+
+//            10
+//         /      \
+//        6        14
+//       /\        /\
+//      4  8     12  16
+void Test1()
+{
+    BinaryTreeNode* pNode10 = CreateBinaryTreeNode(10);
+    BinaryTreeNode* pNode6 = CreateBinaryTreeNode(6);
+    BinaryTreeNode* pNode14 = CreateBinaryTreeNode(14);
+    BinaryTreeNode* pNode4 = CreateBinaryTreeNode(4);
+    BinaryTreeNode* pNode8 = CreateBinaryTreeNode(8);
+    BinaryTreeNode* pNode12 = CreateBinaryTreeNode(12);
+    BinaryTreeNode* pNode16 = CreateBinaryTreeNode(16);
+
+    ConnectTreeNodes(pNode10, pNode6, pNode14);
+    ConnectTreeNodes(pNode6, pNode4, pNode8);
+    ConnectTreeNodes(pNode14, pNode12, pNode16);
+
+    Test("Test1", pNode10);
+
+    DestroyTree(pNode10);
+}
+
+//               5
+//              /
+//             4
+//            /
+//           3
+//          /
+//         2
+//        /
+//       1
+void Test2()
+{
+    BinaryTreeNode* pNode5 = CreateBinaryTreeNode(5);
+    BinaryTreeNode* pNode4 = CreateBinaryTreeNode(4);
+    BinaryTreeNode* pNode3 = CreateBinaryTreeNode(3);
+    BinaryTreeNode* pNode2 = CreateBinaryTreeNode(2);
+    BinaryTreeNode* pNode1 = CreateBinaryTreeNode(1);
+
+    ConnectTreeNodes(pNode5, pNode4, nullptr);
+    ConnectTreeNodes(pNode4, pNode3, nullptr);
+    ConnectTreeNodes(pNode3, pNode2, nullptr);
+    ConnectTreeNodes(pNode2, pNode1, nullptr);
+
+    Test("Test2", pNode5);
+
+    DestroyTree(pNode5);
+}
+
+// 1
+//  \
+//   2
+//    \
+//     3
+//      \
+//       4
+//        \
+//         5
+void Test3()
+{
+    BinaryTreeNode* pNode1 = CreateBinaryTreeNode(1);
+    BinaryTreeNode* pNode2 = CreateBinaryTreeNode(2);
+    BinaryTreeNode* pNode3 = CreateBinaryTreeNode(3);
+    BinaryTreeNode* pNode4 = CreateBinaryTreeNode(4);
+    BinaryTreeNode* pNode5 = CreateBinaryTreeNode(5);
+
+    ConnectTreeNodes(pNode1, nullptr, pNode2);
+    ConnectTreeNodes(pNode2, nullptr, pNode3);
+    ConnectTreeNodes(pNode3, nullptr, pNode4);
+    ConnectTreeNodes(pNode4, nullptr, pNode5);
+
+    Test("Test3", pNode1);
+
+    DestroyTree(pNode1);
+}
+
+// 树中只有1个结点
+void Test4()
+{
+    BinaryTreeNode* pNode1 = CreateBinaryTreeNode(1);
+    Test("Test4", pNode1);
+
+    DestroyTree(pNode1);
+}
+
+// 树中没有结点
+void Test5()
+{
+    Test("Test5", nullptr);
 }
 
 int main(int argc, char* argv[])
 {
-    Test("test1", 1);
-    Test("test2", 3);
-    Test("test3", 4);
-    Test("test4", 9);
-    Test("test5", 15);
-    Test("test6", 100);
+    Test1();
+    Test2();
+    Test3();
+    Test4();
+    Test5();
 
     return 0;
 }

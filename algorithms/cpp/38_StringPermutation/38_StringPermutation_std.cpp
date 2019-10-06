@@ -18,26 +18,20 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 
 #include <cstdio>
 
-void Permutation(char* pStr, char* pBegin);
+void Permutation(char *pStr, char *pBegin);
 
-void Permutation(char* pStr)
-{
-    if(pStr == nullptr)
+void Permutation(char *pStr) {
+    if (pStr == nullptr)
         return;
 
     Permutation(pStr, pStr);
 }
 
-void Permutation(char* pStr, char* pBegin)
-{
-    if(*pBegin == '\0')
-    {
+void Permutation(char *pStr, char *pBegin) {
+    if (*pBegin == '\0') {
         printf("%s\n", pStr);
-    }
-    else
-    {
-        for(char* pCh = pBegin; *pCh != '\0'; ++ pCh)
-        {
+    } else {
+        for (char *pCh = pBegin; *pCh != '\0'; ++pCh) {
             char temp = *pCh;
             *pCh = *pBegin;
             *pBegin = temp;
@@ -52,9 +46,8 @@ void Permutation(char* pStr, char* pBegin)
 }
 
 // ====================测试代码====================
-void Test(char* pStr)
-{
-    if(pStr == nullptr)
+void Test(char *pStr) {
+    if (pStr == nullptr)
         printf("Test for nullptr begins:\n");
     else
         printf("Test for %s begins:\n", pStr);
@@ -64,8 +57,7 @@ void Test(char* pStr)
     printf("\n");
 }
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char *argv[]) {
     Test(nullptr);
 
     char string1[] = "";
