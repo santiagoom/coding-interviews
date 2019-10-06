@@ -1,10 +1,10 @@
 .DS_Store
 .idea/
 temp.py
-tools/
+#tools/
 algorithms/cmake-build-debug/
 
-reference/
+#reference/
 # 60.69M
 reference/剑指OFFER  名企面试官精讲典型编程题  第2版.pdf
 # 2.08M
@@ -108,4 +108,8 @@ algorithms/cmake-build-debug/cpp/_04_/CXX.cbp
 # 1.07M
 algorithms/cmake-build-debug/cpp/22_KthNodeFromEnd/CXX.cbp
 # 2019-09-04 15:26:42.123463
+
+# 60.69M
+reference/剑指OFFER  名企面试官精讲典型编程题  第2版content.pdf
+# 2019-10-06 16:55:58.129830
 
