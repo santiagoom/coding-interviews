@@ -1,6 +1,18 @@
+# .gitignore
+#find . -name "*.py" -exec git add {} +
+#git add \*.py
+
 .DS_Store
 .idea/
-temp.py
+walk.sh
+addIgnore.py
+envs.py
+path.sh
+envs.sh
+utils
+
+
+temp*
 #tools/
 algorithms/cmake-build-debug/
 
@@ -102,7 +114,7 @@ reference/CodingInterviewChinese2/16_Power/资源使用说明.pdf
 # 1.09M
 algorithms/cmake-build-debug/coding-interviews-algo.cbp
 # 1.08M
-algorithms/cmake-build-debug/cpp/_04_/CXX.cbp
+algorithms/cmake-build-debug/*
 # 2019-09-04 14:43:41.018590
 
 # 1.07M

@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.14)
-project(coding-interviews-algo)
+project(coding-interviews)
 
 set(CMAKE_CXX_STANDARD 14)
 
-
 include_directories(cpp/cppUtils/utils)
 include_directories(cpp/cppUtils/Utilities)
+include_directories(../cppUtils/Utilities)
 add_subdirectory(cpp/22_KthNodeFromEnd)
 add_subdirectory(cpp/11_MinNumberInRotatedArray)
 add_subdirectory(cpp/67_StringToInt)
