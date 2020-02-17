@@ -35,5 +35,6 @@ file(GLOB SOURCES
 add_executable(05_ReplaceSpaces_std 05_ReplaceSpaces_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(05_ReplaceSpaces_std_debug 05_ReplaceSpaces_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(05_ReplaceSpaces_practise 05_ReplaceSpaces_practise.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(05_ReplaceSpaces_practise_v2 05_ReplaceSpaces_practise_v2.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(05_ReplaceSpaces_practise_test 05_ReplaceSpaces_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(Solutions05_Repla Solutions.cpp ${SOURCE_FILES} ${SOURCES})
