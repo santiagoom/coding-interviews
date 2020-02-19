@@ -17,7 +17,7 @@ public:
             return {};
         }
         vector<int> visit(length, 0);
-        backtracking(res, subset, str,visit);
+        backtracking(res, subset, str, visit);
         ans = charArray2string(res);
         return ans;
     }
@@ -52,7 +52,7 @@ public:
 
 int main() {
     auto *so = new Solution();
-    string s = "aa";
+    string s = "ab";
     vector<string> res = so->Permutation(s);
     print_1d_vector(res);
     delete so;

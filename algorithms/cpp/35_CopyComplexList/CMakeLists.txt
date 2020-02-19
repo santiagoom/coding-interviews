@@ -31,6 +31,10 @@ file(GLOB SOURCES
 
         ../cppUtils/utils/myutils.h
         ../cppUtils/utils/myutils.cpp
+
+
+        ComplexList.h
+        ComplexList.cpp
         )
 add_executable(35_CopyComplexList_std 35_CopyComplexList_std.cpp ${SOURCE_FILES} ${SOURCES})
 add_executable(35_CopyComplexList_std_debug 35_CopyComplexList_std_debug.cpp ${SOURCE_FILES} ${SOURCES})

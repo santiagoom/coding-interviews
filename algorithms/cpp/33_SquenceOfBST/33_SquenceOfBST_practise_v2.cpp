@@ -17,12 +17,10 @@ public:
 
 private:
     bool helper(vector<int> &sequence, int start, int end) {
-        if (sequence.empty() || start > end)
-            return false;
         int root = sequence[end];
-        int i = 0;
-        for (; i < end; ++i) {
-            if (sequence[start] > root)
+        int i = start;
+        for (; i < end; i++) {
+            if (sequence[i] > root)
                 break;
         }
         int j = i;
@@ -31,20 +29,26 @@ private:
                 return false;
         }
         bool left = true;
-        if (i > 0)
-            left = helper(sequence, start, i);
+        if (i > start)
+            left = helper(sequence, start, i - 1);
         bool right = true;
         if (i < end)
-            right = helper(sequence, i + 1, end - 1);
+            right = helper(sequence, i, end - 1);
         return (left && right);
+
     }
+
 };
 
 int main() {
     auto *so = new Solution();
-    vector<int> nums{3,2,1};
-    bool res =  so->VerifySquenceOfBST(nums);
+//    vector<int> nums{3, 2, 1};
+    vector<int> nums{1, 3, 2, 5, 4};
+    bool res = so->VerifySquenceOfBST(nums);
     print(res);
+
+//    int data[] = {1, 2, 3, 4, 5};
+//    cout<<data<<endl;
     delete so;
     return 0;
 }

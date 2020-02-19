@@ -8,7 +8,7 @@ using namespace std;
 
 class Solution {
 public:
-    bool IsPopOrder(vector<int> pushV, vector<int> popV) {
+    bool IsPopOrder(vector<int> &pushV, vector<int> popV) {
         int N = pushV.size();
         stack<int> stack;
 
