@@ -37,7 +37,7 @@ int main() {
     l1->next->next = new ListNode(3);
     l1->next->next->next = new ListNode(4);
     l1->next->next->next->next = new ListNode(5);
-    printList(l1);
+//    printList(l1);
 
     ListNode *res = so->FindKthToTail(l1, 6);
     if (res->next)

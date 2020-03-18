@@ -2,6 +2,27 @@
 
 斜对角线索引查找。
 
+```cpp
+class Solution {
+public:
+    bool Find(int target, vector<vector<int> > &array) {
+        if (array.empty())
+            return false;
+        int row = 0, col = array[0].size() - 1;
+        while (row < array.size() && col >= 0) {
+            if (target == array[row][col]) {
+                return true;
+            } else if (target > array[row][col]) {
+                row++;
+            } else {
+                col--;
+            }
+        }
+        return false;
+    }
+};
+```
+
 
 
 ## 面试题5：替换空格
@@ -24,6 +45,36 @@
 
 遍历完成之后没有找到，异常退出
 
+```cpp
+  TreeNode *constructHelper(vector<int> &pre, int startPre, int endPre, vector<int> &vin, int startVin, int endVin) {
+        int rootValue = pre[startPre];
+        TreeNode *root = new TreeNode(rootValue);
+
+        if (pre[startPre] == pre[endPre]) {
+            if (vin[startVin] == vin[endVin] && pre[startPre] == vin[startVin])
+                return root;
+            else
+                throw invalid_argument("invalid_argument");
+        }
+
+        int rootPos = startVin;
+        while (startVin <= endVin && rootValue != vin[rootPos])
+            rootPos++;
+        if (rootPos == endVin && rootValue != vin[rootPos])
+            throw invalid_argument("invalid_argument");
+
+        int leftLength = rootPos - startVin;
+        int leftPreEnd = startPre + leftLength;
+
+        if (0 < leftLength)
+            root->left = constructHelper(pre, startPre + 1, leftPreEnd, vin, startVin, rootPos - 1);
+        if (leftLength < endPre - startPre)
+            root->right = constructHelper(pre, leftPreEnd + 1, endPre, vin, rootPos + 1, endVin);
+
+        return root;
+    }
+```
+
 
 
 ## 面试题8：二叉树的下一个结点
@@ -44,11 +95,71 @@
 
    置换当前节点，循环遍历父节点，找到父节点是父节点的左节点的节点
 
-   
+
+```cpp
+BinaryTreeNode *GetNext(BinaryTreeNode *pNode) {
+    if (!pNode)
+        return nullptr;
+
+    BinaryTreeNode *curr = pNode;
+    BinaryTreeNode *par = curr->m_pParent;
+
+    if (curr->m_pRight) {
+        if (!curr->m_pRight->m_pLeft) {
+            return curr->m_pRight;
+        } else {
+            curr = curr->m_pRight;
+            while (curr) {
+                if (!curr->m_pLeft)
+                    return curr->m_pLeft;
+                curr = curr->m_pLeft;
+            }
+            return curr;
+        }
+    }
+
+    if (par && curr == par->m_pLeft)
+        return par;
+
+    while (par && curr == par->m_pRight) {
+        if (par->m_pParent && par == par->m_pParent->m_pLeft)
+            return par->m_pParent;
+        curr = curr->m_pParent;
+        par = par->m_pParent;
+    }
+    return nullptr;
+}
+```
+
+
+
+
 
 ## 面试题9：用两个栈实现队列
 
 第一个栈用于push，第二个栈用于pop，第二个栈pop的时候先遍历第一个栈的数据，存到第二个栈中。
+
+```cpp
+class Solution {
+public:
+    void push(int node) {
+        stack1.push(node);
+    }
+
+    int pop() {
+        if (stack2.empty()) {
+            while (!stack1.empty()) {
+                stack2.push(stack1.top());
+                stack1.pop();
+            }
+        }
+        if (stack2.empty())
+            throw exception();
+        int data = stack2.top();
+        stack2.pop();
+        return data;
+    }
+```
 
 
 
@@ -64,6 +175,22 @@ f(n) = f(n-1)+f(n-2)+f(n-3)+...+f(1)+1=2^n-1    回溯算法
 
 矩形覆盖
 
+```cpp
+class Solution_ {
+public:
+    int jumpFloorII(int number) {
+        int res = 0;
+        if (number == 0)
+            return 1;
+
+        for (int i = 1; i <= number; i++) {
+            res += jumpFloorII(number - i);
+        }
+        return res;
+    }
+};
+```
+
 
 
 ## 面试题11：旋转数组的最小数字
@@ -72,11 +199,65 @@ f(n) = f(n-1)+f(n-2)+f(n-3)+...+f(1)+1=2^n-1    回溯算法
 
 特殊情况，当start，mid，end相等的时候，线性查找。minNumInSequence
 
+```cpp
+class Solution {
+public:
+    int minNumberInRotateArray(vector<int> &rotateArray) {
+        int res = 0;
+        if (rotateArray.empty())
+            return res;
+
+        int start = 0;
+        int end = rotateArray.size() - 1;
+        int mid = start;
+        while (rotateArray[start] >= rotateArray[end]) {
+            if (end - start == 1)
+                return rotateArray[end];
+            mid = (start + end) / 2;
+            if (rotateArray[start] == rotateArray[end] && rotateArray[start] == rotateArray[mid])
+                return minNumInSequence(rotateArray, start, end);
+            if (rotateArray[mid] >= rotateArray[start])
+                start = mid;
+            else if (rotateArray[mid] <= rotateArray[end])
+                end = mid;
+        }
+        return rotateArray[mid];
+    }
+
+private:
+
+    int minNumInSequence(vector<int> &rotateArray, int start, int end) {
+        int ans = rotateArray[start];
+        for (int i = start + 1; i <= end; i++) {
+            if (rotateArray[i] < ans)
+                ans = rotateArray[i];
+        }
+        return ans;
+    }
+};
+```
+
 
 
 ## 面试题15：二进制中1的个数
 
 可以利用while (flag)遍历
+
+```cpp
+class Solution1 {
+public:
+    int NumberOf1(int n) {
+        int count = 0;
+        unsigned int flag = 1;
+        while (flag) {
+            if (n & flag)
+                count++;
+            flag = flag << 1;
+        }
+        return count;
+    }
+};
+```
 
 
 
@@ -85,6 +266,29 @@ f(n) = f(n-1)+f(n-2)+f(n-3)+...+f(1)+1=2^n-1    回溯算法
 二分乘积
 
 return exponent % 2 == 0 ? Power(base * base, exponent / 2) : base * Power(base * base, exponent / 2);
+
+```cpp
+class Solution {
+public:
+    double Power(double base, int exponent) {
+        bool isNegative = false;
+        if (exponent < 0) {
+            isNegative = true;
+            base = 1 / base;
+            exponent = -exponent;
+        }
+        double ans = powUtils(base, exponent);
+        return ans;
+    }
+
+private:
+    double powUtils(double base, int exponent) {
+        if (exponent == 0)
+            return 1;
+        return exponent % 2 == 0 ? Power(base * base, exponent / 2) : base * Power(base * base, exponent / 2);
+    }
+};
+```
 
 
 
@@ -102,9 +306,48 @@ return exponent % 2 == 0 ? Power(base * base, exponent / 2) : base * Power(base 
 
 一次线性复杂度，隔开k个节点。
 
+```cpp
+ if (k > i)
+            return nullptr;
+        else {
+            return second->next;
+        }
+```
+
 
 
 ## 面试题24：反转链表
+
+```cpp
+ListNode *reverseLinklistRecursiveUtils(ListNode *curr, ListNode *prev) {
+    if (!curr->next) {
+        curr->next = prev;
+        return curr;
+    }
+    ListNode *next = curr->next;
+    curr->next = prev;
+    return reverseLinklistRecursiveUtils(next, curr);
+}
+
+ListNode *reverseLinklistRecursive(ListNode *head) {
+    if (!head)
+        return nullptr;
+    return reverseLinklistRecursiveUtils(head, nullptr);
+}
+
+ListNode *reverseLinklistIterative(ListNode *head) {
+
+    ListNode *curr = head;
+    ListNode *prev = nullptr, *next = nullptr;
+    while (curr) {
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+    return prev;
+}
+```
 
 
 
@@ -209,6 +452,34 @@ void push(int number) {
 以数组形式传值时，所有的参照点为0和长度。（长度）
 
 以vector形式传值时，所有的参照点为start和end。（索引）
+
+```
+private:
+    bool helper(vector<int> &sequence, int start, int end) {
+        if (sequence.empty() || start > end)
+            return false;
+        int root = sequence[end];
+        int i = 0;
+        for (; i < end; ++i) {
+            if (sequence[start] > root)
+                break;
+        }
+        int j = i;
+        for (; j < end; ++j) {
+            if (sequence[j] < root)
+                return false;
+        }
+        bool left = true;
+        if (i > 0)
+            left = helper(sequence, start, i);
+        bool right = true;
+        if (i < end)
+            right = helper(sequence, i + 1, end - 1);
+        return (left && right);
+    }
+```
+
+
 
 
 

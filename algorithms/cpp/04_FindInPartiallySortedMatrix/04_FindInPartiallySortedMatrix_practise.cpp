@@ -9,7 +9,6 @@ public:
     bool Find(int target, vector<vector<int> > &array) {
         if (array.empty())
             return false;
-
         int row = 0, col = array[0].size() - 1;
         while (row < array.size() && col >= 0) {
             if (target == array[row][col]) {
