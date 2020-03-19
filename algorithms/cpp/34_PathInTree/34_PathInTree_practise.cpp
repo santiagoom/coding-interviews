@@ -34,7 +34,6 @@ public:
         currentSum -= pRoot->val;
         path.pop_back();
     }
-
 };
 
 int main() {

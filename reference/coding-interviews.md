@@ -355,6 +355,36 @@ ListNode *reverseLinklistIterative(ListNode *head) {
 
 遍历tree1检测tree1的各个节点是否含有tree2，如果节点相等了，检查以此节点为根的树是否与tree2一致。
 
+```cpp
+class Solution {
+//    passed
+public:
+    bool HasSubtree(TreeNode *pRoot1, TreeNode *pRoot2) {
+        bool result = false;
+        if (pRoot1 != nullptr && pRoot2 != nullptr) {
+            if (pRoot1->val == pRoot2->val)
+                result = DoesTree1HaveTree2(pRoot1, pRoot2);
+            if (!result)
+                result = HasSubtree(pRoot1->left, pRoot2);
+            if (!result)
+                result = HasSubtree(pRoot1->right, pRoot2);
+        }
+        return result;
+    }
+
+    bool DoesTree1HaveTree2(TreeNode *pRoot1, TreeNode *pRoot2) {
+        if (pRoot2 == nullptr)
+            return true;
+        if (pRoot1 == nullptr)
+            return false;
+        if (pRoot1->val != pRoot2->val)
+            return false;
+        return DoesTree1HaveTree2(pRoot1->left, pRoot2->left) &&
+               DoesTree1HaveTree2(pRoot1->right, pRoot2->right);
+    }
+};
+```
+
 
 
 ## 面试题27：二叉树的镜像
@@ -363,7 +393,7 @@ ListNode *reverseLinklistIterative(ListNode *head) {
 
 交换根节点的左右节点，然后循环遍历。
 
-```
+```cpp
 二叉树的镜像定义：源二叉树 
     	    8
     	   /  \
@@ -376,32 +406,89 @@ ListNode *reverseLinklistIterative(ListNode *head) {
     	  10   6
     	 / \  / \
     	11 9 7  5
+class Solution {
+public:
+    void Mirror(TreeNode *pNode) {
+        if ((pNode == nullptr))
+            return;
+        TreeNode *pTemp = pNode->left;
+        pNode->left = pNode->right;
+        pNode->right = pTemp;
+        if (pNode->left)
+            Mirror(pNode->left);
+        if (pNode->right)
+            Mirror(pNode->right);
+    }
+};
 ```
 
 
 
 ## 面试题28：对称的二叉树
 
+```
+// 面试题28：对称的二叉树
+// 题目：请实现一个函数，用来判断一棵二叉树是不是对称的。如果一棵二叉树和
+// 它的镜像一样，那么它是对称的。
+```
+
 判断根节点是否相等，然后循环遍历左右节点。
 
-```
-isSymmetrical(pRoot1->m_pLeft, pRoot2->m_pRight)
+```cpp
+bool isSymmetrical(BinaryTreeNode* pRoot)
+{
+    return isSymmetrical(pRoot, pRoot);
+}
+bool isSymmetrical(BinaryTreeNode* pRoot1, BinaryTreeNode* pRoot2)
+{
+    if(pRoot1 == nullptr && pRoot2 == nullptr)
+        return true;
+
+    if(pRoot1 == nullptr || pRoot2 == nullptr)
+        return false;
+
+    if(pRoot1->m_nValue != pRoot2->m_nValue)
+        return false;
+
+    return isSymmetrical(pRoot1->m_pLeft, pRoot2->m_pRight)
         && isSymmetrical(pRoot1->m_pRight, pRoot2->m_pLeft);
+}
 ```
-
-
 
 
 
 ## 面试题29：顺时针打印矩阵
 
-按照坐标循环输出
+先定坐标，然后按照坐标循环输出
 
-```
-r1++;
-r2--;
-c1++;
-c2--;
+```cpp
+class Solution {
+public:
+    vector<int> printMatrix(vector<vector<int> > matrix) {
+        vector<int> ans;
+        if (matrix.empty())
+            return ans;
+        int r1 = 0, r2 = matrix.size() - 1;
+        int c1 = 0, c2 = matrix[0].size() - 1;
+        while (r1 <= r2 && c1 <= c2) {
+            for (int c = c1; c <= c2; c++)
+                ans.push_back(matrix[r1][c]);
+            for (int r = r1 + 1; r <= r2; r++)
+                ans.push_back(matrix[r][c2]);
+            if (r1 < r2 && c1 < c2) {
+                for (int c = c2 - 1; c > c1; c--)
+                    ans.push_back(matrix[r2][c]);
+                for (int r = r2; r > r1; r--)
+                    ans.push_back(matrix[r][c1]);
+            }
+            r1++;
+            r2--;
+            c1++;
+            c2--;
+        }
+        return ans;
+    }
+};
 ```
 
 
@@ -413,8 +500,12 @@ c2--;
 
 利用两个栈维护 stack\<int> stk, minstk;
 
-```
-void push(int number) {
+```cpp
+class Solution {
+public:
+    stack<int> stk, minstk;
+
+    void push(int number) {
         stk.push(number);
         if (minstk.empty() or number <= minstk.top()) {
             minstk.push(number);
@@ -429,6 +520,15 @@ void push(int number) {
         }
         return top;
     }
+
+    int top() {
+        return stk.top();
+    }
+
+    int min() {
+        return minstk.top();
+    }
+};
 ```
 
 
@@ -442,6 +542,26 @@ void push(int number) {
 
 记录push序列和pop序列的长度，利用栈将push序列压入栈中，每压入一个元素，检查栈的top元素与pop序列元素是否相等，如果相等，则将元素pop出栈，接着检查栈的top元素，直到元素全部push完成，最后检查push序列和pop序列的长度是否相等。
 
+```cpp
+class Solution {
+public:
+    bool IsPopOrder(vector<int> &pushV, vector<int> popV) {
+        int N = pushV.size();
+        stack<int> stack;
+
+        int j = 0;
+        for (int x: pushV) {
+            stack.push(x);
+            while (!stack.empty() && j < N && stack.top() == popV[j]) {
+                stack.pop();
+                j++;
+            }
+        }
+        return j == N;
+    }
+};
+```
+
 
 
 ## 面试题33：二叉搜索树的后序遍历序列
@@ -453,15 +573,22 @@ void push(int number) {
 
 以vector形式传值时，所有的参照点为start和end。（索引）
 
-```
+```cpp
+class Solution {
+public:
+    bool VerifySquenceOfBST(vector<int> sequence) {
+        if (sequence.empty())
+            return false;
+        int length = sequence.size();
+        return helper(sequence, 0, length - 1);
+    }
+
 private:
     bool helper(vector<int> &sequence, int start, int end) {
-        if (sequence.empty() || start > end)
-            return false;
         int root = sequence[end];
-        int i = 0;
-        for (; i < end; ++i) {
-            if (sequence[start] > root)
+        int i = start;
+        for (; i < end; i++) {
+            if (sequence[i] > root)
                 break;
         }
         int j = i;
@@ -470,13 +597,14 @@ private:
                 return false;
         }
         bool left = true;
-        if (i > 0)
-            left = helper(sequence, start, i);
+        if (i > start)
+            left = helper(sequence, start, i - 1);
         bool right = true;
         if (i < end)
-            right = helper(sequence, i + 1, end - 1);
+            right = helper(sequence, i, end - 1);
         return (left && right);
     }
+};
 ```
 
 
@@ -490,7 +618,40 @@ private:
 
 将存放所有路径paths的vector的地址传入，然后控制path和其对应的currentSum，将满足条件的path存入paths。
 
-注意递归完成之后对于不满足条件的path，和currentSum的控制。
+需要满足的条件是currentSum == expectedSum && isLeaf
+
+注意递归完成之后对于不满足条件的path，和currentSum的控制，path和currentSum对应。
+
+```cpp
+class Solution {
+public:
+    vector<vector<int> > FindPath(TreeNode *root, int expectNumber) {
+        if (root == nullptr)
+            return {};
+        vector<vector<int> > paths;
+        vector<int> path;
+        int currentSum = 0;
+        FindPath(root, expectNumber, paths, path, currentSum);
+        return paths;
+    }
+
+    void FindPath(TreeNode *pRoot, int expectedSum, vector<vector<int> > &paths, vector<int> &path, int &currentSum
+    ) {
+        currentSum += pRoot->val;
+        path.push_back(pRoot->val);
+        bool isLeaf = pRoot->left == nullptr && pRoot->right == nullptr;
+        if (currentSum == expectedSum && isLeaf) {
+            paths.push_back(path);
+        }
+        if (pRoot->left != nullptr)
+            FindPath(pRoot->left, expectedSum, paths, path, currentSum);
+        if (pRoot->right != nullptr)
+            FindPath(pRoot->right, expectedSum, paths, path, currentSum);
+        currentSum -= pRoot->val;
+        path.pop_back();
+    }
+};
+```
 
 
 
@@ -502,6 +663,12 @@ private:
 
 三部曲。。。。。。。
 
+第一步，复制单向链表。
+
+第二步，复制任意节点。
+
+第三部，奇偶节点拆分，拆成两个相同的链表。
+
 
 
 ## 面试题36：二叉搜索树与双向链表
@@ -509,7 +676,34 @@ private:
 // 题目：输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求
 // 不能创建任何新的结点，只能调整树中结点指针的指向。
 
-采用中序遍历bst，新建辅助节点pLastNodeInList，将其地址传入用来接收当前节点的left节点值。
+采用中序遍历bst，新建辅助节点pLastNodeInList，将其地址传入用来接收当前节点的left节点值，最后完成之后再返回到头结点。开始一直往右走，走完之后返回来！
+
+```cpp
+ class Solution {
+public:
+    TreeNode *Convert(TreeNode *pRootOfTree) {
+        TreeNode *pLastNodeInList = nullptr;
+        ConvertNode(pRootOfTree, &pLastNodeInList);
+        TreeNode *pHeadOfList = pLastNodeInList;
+        while (pHeadOfList != nullptr && pHeadOfList->left != nullptr)
+            pHeadOfList = pHeadOfList->left;
+        return pHeadOfList;
+    }
+    void ConvertNode(TreeNode *pNode, TreeNode **pLastNodeInList) {
+        if (pNode == nullptr)
+            return;
+        TreeNode *pCurrent = pNode;
+        if (pCurrent->left != nullptr)
+            ConvertNode(pCurrent->left, pLastNodeInList);
+        pCurrent->left = *pLastNodeInList;
+        if (*pLastNodeInList != nullptr)
+            (*pLastNodeInList)->right = pCurrent;
+        *pLastNodeInList = pCurrent;
+        if (pCurrent->right != nullptr)
+            ConvertNode(pCurrent->right, pLastNodeInList);
+    }
+};
+```
 
 
 
@@ -520,7 +714,54 @@ private:
 
 
 
-循环遍历字符串的每一个元素，记录 每一个元素是否visit，根据条件添加。
+循环遍历字符串的每一个元素，记录 每一个元素是否visit，根据条件添加。注意if，else的位置。
+
+```cpp
+class Solution {
+public:
+    vector<string> Permutation(string str) {
+        vector<string> ans;
+        vector<vector<char>> res;
+        vector<char> subset;
+        int length = str.length();
+
+        if (length == 0) {
+            return {};
+        }
+        vector<int> visit(length, 0);
+        backtracking(res, subset, str, visit);
+        ans = charArray2string(res);
+        return ans;
+    }
+
+    void backtracking(vector<vector<char>> &res, vector<char> subset, string str, vector<int> visit) {
+        if (subset.size() == str.length())
+            res.push_back(subset);
+        else {
+            for (int i = 0; i < str.length(); i++) {
+                if (visit[i] || (i > 0 && str[i - 1] == str[i] && visit[i - 1]))
+                    continue;
+                visit[i] = 1;
+                subset.push_back(str[i]);
+                backtracking(res, subset, str, visit);
+                visit[i] = 0;
+                subset.pop_back();
+            }
+        }
+    }
+
+    vector<string> charArray2string(vector<vector<char>> &res) {
+        vector<string> ans;
+        for (auto &level:res) {
+            string s = "";
+            for (char &ele:level)
+                s += ele;
+            ans.push_back(s);
+        }
+        return ans;
+    }
+};
+```
 
 
 
@@ -534,14 +775,43 @@ private:
 
 如果数组中存在次数超过一半的数字，则其出现的次数比高于其他所有数字出现的次数之和。记录出现数字的次数，如果与前一个相同，则加1，如果不相同 ，则减1，当次数为0了，则从下一个出现的开始统计，最后检查记录次数最多的这个值是否是出现次数超过一半的。
 
+```cpp
+class Solution {
+public:
+    int MoreThanHalfNum_Solution(vector<int> &numbers) {
+        if (numbers.empty())
+            return 0;
+        int res = numbers[0];
+        int time = 1;
+        for (int i = 0; i < numbers.size(); i++) {
+            if (time == 0) {
+                res = numbers[i];
+                time = 1;
+            } else if (numbers[i] == res) {
+                time++;
+            } else {
+                time--;
+            }
+        }
+
+        time = 0;
+        for (int i = 0; i < numbers.size(); i++) {
+            if (numbers[i] == res)
+                time++;
+        }
+        if (time * 2 > numbers.size())
+            return res;
+        return 0;
+    }
+};
+```
+
 
 
 ## 面试题40：最小的k个数
 
 // 题目：输入n个整数，找出其中最小的k个数。例如输入4、5、1、6、2、7、3、8
 // 这8个数字，则最小的4个数字是1、2、3、4。
-
-
 
 先取前k个数构建最大堆，然后依次将后续数字与最大值比较，根据大小插入。O(nlogk)
 

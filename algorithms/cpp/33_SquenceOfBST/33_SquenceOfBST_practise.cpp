@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 class Solution {
 public:
     bool VerifySquenceOfBST(vector<int> sequence) {
@@ -42,8 +41,8 @@ private:
 
 int main() {
     auto *so = new Solution();
-    vector<int> nums{3,2,1};
-    bool res =  so->VerifySquenceOfBST(nums);
+    vector<int> nums{3, 2, 1};
+    bool res = so->VerifySquenceOfBST(nums);
     print(res);
     delete so;
     return 0;

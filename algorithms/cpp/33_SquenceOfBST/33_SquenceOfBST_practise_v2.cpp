@@ -35,9 +35,7 @@ private:
         if (i < end)
             right = helper(sequence, i, end - 1);
         return (left && right);
-
     }
-
 };
 
 int main() {
