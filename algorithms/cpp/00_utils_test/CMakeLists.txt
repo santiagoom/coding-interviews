@@ -1,33 +1,44 @@
-cmake_minimum_required(VERSION 3.14)
-project(CXX)
+cmake_minimum_required(VERSION 3.17)
+project(test_utils)
 
 set(CMAKE_CXX_STANDARD 14)
 
-file(GLOB SOURCES
-        ../Utilities/Array.h
-        ../Utilities/Array.cpp
+set(UseCppUtilsMyUtils ON)
+set(UseCppUtilsVTKUtils ON)
+set(UseCodingInterviewUtils ON)
 
-        ../Utilities/BinaryTree.h
-        ../Utilities/BinaryTree.cpp
+if (MSVC)
+    list(APPEND CMAKE_PREFIX_PATH "D:\\gitrepoe\\lang-tutorial\\02-utils\\cppUtils")
+else ()
+    list(APPEND CMAKE_PREFIX_PATH "/Users/tianm/repos/lang-tutorial/02-utils/cppUtils")
+endif (MSVC)
 
-        ../Utilities/List.h
-        ../Utilities/List.cpp
+find_package(cppUtils REQUIRED)
 
-        ../Utilities/StringUtil.h
-        ../Utilities/StringUtil.cpp
+file(GLOB ALL_FILES *.cpp)
+foreach (SOURCE_FILE ${ALL_FILES})
+    string(REPLACE ".cpp" "" TMP ${SOURCE_FILE})
+    string(REPLACE ${CMAKE_CURRENT_SOURCE_DIR}/ "" EXAMPLE ${TMP})
+    add_executable(${EXAMPLE} ${EXAMPLE}.cpp)
+    target_link_libraries(${EXAMPLE} ${cppUtils_LIBS})
+endforeach ()
 
-        ../Utilities/Tree.h
-        ../Utilities/Tree.cpp
+#if (MSVC)
+#    set(TARGET_NAME myVTKUtilsTest)
+#    add_custom_command(TARGET ${TARGET_NAME}
+#            POST_BUILD
+#            COMMAND ${CMAKE_COMMAND} -E copy_directory
+#            "${VTK_INSTALL_PREFIX}/bin/"
+#            $<TARGET_FILE_DIR:${TARGET_NAME}>
+#            )
+#endif (MSVC)
 
 
-        ../utils/myListNode.h
-        ../utils/myListNode.cpp
+#message(STATUS "print_all_variables------------------------------------------{")
+#get_cmake_property(_variableNames VARIABLES)
+#foreach (_variableName ${_variableNames})
+#    message(STATUS "${_variableName}=${${_variableName}}")
+#endforeach ()
+#message(STATUS "print_all_variables------------------------------------------}")
 
-        ../utils/myTreeNode.h
-        ../utils/myTreeNode.cpp
-        )
 
-add_executable(myTreeNode_test myTreeNode_test.cpp ${SOURCE_FILES} ${SOURCES})
-
-add_executable(test test.cpp)
-add_executable(test2 test2.cpp)
