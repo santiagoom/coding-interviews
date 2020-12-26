@@ -17,7 +17,8 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 // 头结点。
 
 #include <cstdio>
-#include "../Utilities/List.h"
+//#include "../Utilities/List.h"
+#include<List.h>
 
 ListNode *ReverseList(ListNode *pHead) {
     ListNode *pReversedHead = nullptr;

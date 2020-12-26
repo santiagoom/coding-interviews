@@ -17,7 +17,8 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 // 打印到一行。
 
 #include <cstdio>
-#include "..\Utilities\BinaryTree.h"
+//#include "..\Utilities\BinaryTree.h"
+#include <BinaryTree.h>
 #include <queue>
 
 void Print(BinaryTreeNode* pRoot)

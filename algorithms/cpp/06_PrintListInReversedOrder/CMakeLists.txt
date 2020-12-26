@@ -1,71 +1,51 @@
-cmake_minimum_required(VERSION 3.14)
-project(CXX)
+cmake_minimum_required(VERSION 3.17)
+project(cpp_utils)
 
-set(CMAKE_CXX_STANDARD 14)
-#
-#file(GLOB SOURCES
-#        ../../../utils/cppUtils/Utilities/Array.h
-#        ../../../utils/cppUtils/Utilities/Array.cpp
-#
-#        ../../../utils/cppUtils/Utilities/BinaryTree.h
-#        ../../../utils/cppUtils/Utilities/BinaryTree.cpp
-#
-#        ../../../utils/cppUtils/Utilities/List.h
-#        ../../../utils/cppUtils/Utilities/List.cpp
-#
-#        ../../../utils/cppUtils/Utilities/StringUtil.h
-#        ../../../utils/cppUtils/Utilities/StringUtil.cpp
-#
-#        ../../../utils/cppUtils/Utilities/Tree.h
-#        ../../../utils/cppUtils/Utilities/Tree.cpp
-#
-#
-#        ../../../utils/cppUtils/utils/myListNode.h
-#        ../../../utils/cppUtils/utils/myListNode.cpp
-#
-#        ../../../utils/cppUtils/utils/myTreeNode.h
-#        ../../../utils/cppUtils/utils/myTreeNode.cpp
-#
-#        ../../../utils/cppUtils/utils/myVector.h
-#        ../../../utils/cppUtils/utils/myVector.cpp
-#
-#        ../../../utils/cppUtils/utils/myutils.h
-#        ../../../utils/cppUtils/utils/myutils.cpp
-#        )
+set(CMAKE_CXX_STANDARD 11)
+
+set(UseCppUtils ON)
+#set(UseQtUtils ON)
+#set(UseVTKUtils ON)
+#set(UseCodingInterviewUtils ON)
+
+if (MSVC)
+    list(APPEND CMAKE_PREFIX_PATH "D:\\gitrepoe\\lang-tutorial\\02-utils\\cppUtils")
+else ()
+    list(APPEND CMAKE_PREFIX_PATH "/Users/tianm/repos/lang-tutorial/02-utils/cppUtils")
+endif (MSVC)
+
+find_package(Utils REQUIRED)
+
+file(GLOB ALL_FILES *.cpp)
+foreach (SOURCE_FILE ${ALL_FILES})
+    string(REPLACE ".cpp" "" TMP ${SOURCE_FILE})
+    string(REPLACE ${CMAKE_CURRENT_SOURCE_DIR}/ "" EXAMPLE ${TMP})
+    add_executable(${EXAMPLE} ${EXAMPLE}.cpp)
+    target_link_libraries(${EXAMPLE} ${Utils_LIBRARIES})
+endforeach ()
+
+file(GLOB ALL_FILES *.cxx)
+foreach (SOURCE_FILE ${ALL_FILES})
+    string(REPLACE ".cxx" "" TMP ${SOURCE_FILE})
+    string(REPLACE ${CMAKE_CURRENT_SOURCE_DIR}/ "" EXAMPLE ${TMP})
+    add_executable(${EXAMPLE} ${EXAMPLE}.cxx)
+    target_link_libraries(${EXAMPLE} ${Utils_LIBRARIES})
+endforeach ()
+
+if (MSVC AND UseVTKUtils)
+    set(TARGET_NAME VTKUtils)
+    add_custom_command(TARGET ${TARGET_NAME}
+            POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_directory
+            "${VTK_INSTALL_PREFIX}/bin/"
+            $<TARGET_FILE_DIR:${TARGET_NAME}>
+            )
+endif (MSVC AND UseVTKUtils)
 
 
-#file(GLOB SOURCES
-#        ../../../utils/cppUtils/Utilities/Array.h
-#        ../../../utils/cppUtils/Utilities/Array.cpp
-#
-#        ../../../utils/cppUtils/Utilities/BinaryTree.h
-#        ../../../utils/cppUtils/Utilities/BinaryTree.cpp
-#
-#        ../../../utils/cppUtils/Utilities/List.h
-#        ../../../utils/cppUtils/Utilities/List.cpp
-#
-#        ../../../utils/cppUtils/Utilities/StringUtil.h
-#        ../../../utils/cppUtils/Utilities/StringUtil.cpp
-#
-#        ../../../utils/cppUtils/Utilities/Tree.h
-#        ../../../utils/cppUtils/Utilities/Tree.cpp
-#
-#
-#        ../../../utils/cppUtils/utils/myListNode.h
-#        ../../../utils/cppUtils/utils/myListNode.cpp
-#
-#        ../../../utils/cppUtils/utils/myTreeNode.h
-#        ../../../utils/cppUtils/utils/myTreeNode.cpp
-#
-#        ../../../utils/cppUtils/utils/myVector.h
-#        ../../../utils/cppUtils/utils/myVector.cpp
-#
-#        ../../../utils/cppUtils/utils/myutils.h
-#        ../../../utils/cppUtils/utils/myutils.cpp
-#        )
-
-add_executable(06_PrintListInReversedOrder_std 06_PrintListInReversedOrder_std.cpp ${SOURCE_FILES} ${SOURCES})
-add_executable(06_PrintListInReversedOrder_std_debug 06_PrintListInReversedOrder_std_debug.cpp ${SOURCE_FILES} ${SOURCES})
-add_executable(06_PrintListInReversedOrder_practise 06_PrintListInReversedOrder_practise.cpp ${SOURCE_FILES} ${SOURCES})
-add_executable(06_PrintListInReversedOrder_practise_test 06_PrintListInReversedOrder_practise_test.cpp ${SOURCE_FILES} ${SOURCES})
-add_executable(Solutions06_Print Solutions.cpp ${SOURCE_FILES} ${SOURCES})
+#message(STATUS "print_all_variables------------------------------------------{")
+#get_cmake_property(_variableNames VARIABLES)
+#foreach (_variableName ${_variableNames})
+#    message(STATUS "${_variableName}=${${_variableName}}")
+#endforeach ()
+#message(STATUS "print_all_variables------------------------------------------}")
