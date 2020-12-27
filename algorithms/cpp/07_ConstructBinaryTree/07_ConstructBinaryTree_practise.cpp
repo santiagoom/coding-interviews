@@ -1,8 +1,9 @@
 #include <iostream>
 #include <vector>
-#include "myTreeNode.h"
+#include <cppUtils.h>
 
 using namespace std;
+typedef CppUtils cu;
 
 
 class Solution {
@@ -52,9 +53,9 @@ int main() {
     vector<int> vin{4, 7, 2, 1, 5, 3, 8, 6};
 
     auto res = so->reConstructBinaryTree(pre, vin);
-    preorderTraversal(res);
+    cu::preorderTraversal(res);
     cout << endl;
-    inorderTraversal(res);
+    cu::inorderTraversal(res);
     delete so;
     return 0;
 }
