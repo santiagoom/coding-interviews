@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(UseCppUtils ON)
 #set(UseQtUtils ON)
 #set(UseVTKUtils ON)
-#set(UseCodingInterviewUtils ON)
+set(UseCodingInterviewUtils ON)
 
 if (MSVC)
     list(APPEND CMAKE_PREFIX_PATH "D:\\gitrepoe\\lang-tutorial\\02-utils\\cppUtils")
@@ -49,3 +49,6 @@ endif (MSVC AND UseVTKUtils)
 #    message(STATUS "${_variableName}=${${_variableName}}")
 #endforeach ()
 #message(STATUS "print_all_variables------------------------------------------}")
+
+
+
