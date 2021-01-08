@@ -67,7 +67,8 @@ public:
     {
         int size = min.size() + max.size();
         if(size == 0)
-            throw exception("No numbers are available");
+//            throw exception("No numbers are available");
+            throw exception();
 
         T median = 0;
         if((size & 1) == 1)
@@ -89,7 +90,8 @@ void Test(char* testName, DynamicArray<double>& numbers, double expected)
     if(testName != nullptr)
         printf("%s begins: ", testName);
 
-    if(abs(numbers.GetMedian() - expected) < 0.0000001)
+//    if(abs(numbers.GetMedian() - expected) < 0.0000001)
+    if(abs(int(numbers.GetMedian() - expected)) < 0.0000001)
         printf("Passed.\n");
     else
         printf("FAILED.\n");

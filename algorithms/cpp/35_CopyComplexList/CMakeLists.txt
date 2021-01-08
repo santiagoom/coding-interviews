@@ -16,6 +16,8 @@ endif (MSVC)
 
 find_package(Utils REQUIRED)
 
+include_directories(./)
+
 file(GLOB ALL_FILES *.cpp)
 foreach (SOURCE_FILE ${ALL_FILES})
     string(REPLACE ".cpp" "" TMP ${SOURCE_FILE})
