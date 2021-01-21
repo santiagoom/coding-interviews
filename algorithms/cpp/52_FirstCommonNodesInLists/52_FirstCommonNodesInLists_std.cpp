@@ -17,7 +17,7 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 
 #include <cstdio>
 //#include "..\Utilities\List.h"
-#include "../cppUtils/Utilities/List.h"
+#include "../Utilities/List.h"
 
 unsigned int GetListLength(ListNode *pHead);
 
