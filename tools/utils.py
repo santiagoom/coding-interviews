@@ -32,7 +32,7 @@ def search_gbk2utf8(src, dst):
     for root, dirs, files in os.walk(src):
         for file in files:
             # if (file.endswith(".cpp")) or (file.endswith(".h")):
-            if (file.endswith(".cpp")) :
+            if (file.endswith(".cpp")):
                 # print(file)
                 file_name = os.path.join(root, file)
                 # print(file_name)
@@ -119,6 +119,40 @@ def Utilities_decode(path, dst):
                 f.write(content)
 
 
+def generate_template():
+    content = """#include <iostream>
+#include <vector>
+#include <cppUtils.h>
+
+using namespace std;
+
+class Solution {
+public:
+
+};
+
+int main() {
+    auto *so = new Solution();
+    vector<int> nums{1, 2, 3, 4, 5, 6};
+    CppUtils::print_1d_vector(nums);
+    delete so;
+    return 0;
+}
+    """
+    path = "now1"
+
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    for i in range(1, 68):
+        filename = "JZ{}_.cpp".format(i)
+        filename = os.path.join(path, filename)
+        with open(filename, mode='w', encoding='utf8')as f:
+            f.write(content)
+
+    pass
+
+
 def funcs_():
     pass
 
@@ -137,7 +171,9 @@ def run():
     # gbk2utf8(output)
 
     # combine 1 and 2
-    search_gbk2utf8(code_src, output)
+    # search_gbk2utf8(code_src, output)
+
+    generate_template()
 
 
 if __name__ == "__main__":
