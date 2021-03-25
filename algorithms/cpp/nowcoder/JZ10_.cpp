@@ -6,8 +6,23 @@ using namespace std;
 
 class Solution {
 public:
-
+    int rectCover(int number) {
+        vector<int> dp(number + 1, 0);
+        if (0 >= number)
+            return 0;
+        if (1 == number)
+            return number;
+        if (2 == number)
+            return number;
+        dp[1] = 1;
+        dp[2] = 2;
+        for (int i = 3; i <= number; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+        return dp[number];
+    }
 };
+
 
 int main() {
     auto *so = new Solution();
@@ -25,4 +40,3 @@ int main() {
     delete so;
     return 0;
 }
-    
