@@ -3,7 +3,7 @@
 #include <cppUtils.h>
 
 using namespace std;
-
+//矩形覆盖
 class Solution {
 public:
     int rectCover(int number) {
