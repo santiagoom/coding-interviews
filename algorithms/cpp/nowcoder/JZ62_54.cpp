@@ -6,6 +6,9 @@ using namespace std;
 
 static struct TreeNode *node = NULL;
 
+// 二叉搜索树的第k个结点
+
+
 class Solution {
 public:
 /**
@@ -41,7 +44,6 @@ public:
         find_k(pRoot, k, &count);
         return node;
     }
-
 };
 
 int main() {

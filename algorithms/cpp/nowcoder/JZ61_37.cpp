@@ -4,6 +4,8 @@
 
 using namespace std;
 
+// 序列化二叉树
+
 /*
 struct TreeNode {
     int val;
@@ -55,7 +57,13 @@ public:
 
 int main() {
     auto *so = new Solution();
-    cout << "new file!" << endl;
+    TreeNode *root = new TreeNode(10);
+    root->left = new TreeNode(20);
+    root->right = new TreeNode(30);
+    char *res = so->Serialize(root);
+    CppUtils::print(res);
+    TreeNode *out = so->Deserialize(res);
+    CppUtils::preorderTraversal(out);
     delete so;
     return 0;
 }

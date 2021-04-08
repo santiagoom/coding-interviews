@@ -12,3 +12,13 @@ static bool cmp(int a, int b) {
 }
 ```
 
+JZ50
+
+```
+while (numbers[i] != i) {
+    if (numbers[i] == numbers[numbers[i]]) return numbers[i];
+    else swap(numbers[i], numbers[numbers[i]]);
+}
+某种形式的哈希编码
+```
+
