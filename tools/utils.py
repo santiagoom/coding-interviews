@@ -162,6 +162,22 @@ int main() {
     pass
 
 
+def generate_p1():
+    path = "/Users/tianm/repos/coding-interviews/algorithms/cpp/nowcoder"
+    for file in os.listdir(path):
+        if file.startswith("J"):
+            problem = file.split("_")[0]
+            problem_p1 = "{}_p1.cpp".format(problem)
+            print(problem)
+            print(problem_p1)
+
+            problem_p1 = os.path.join(path, problem_p1)
+
+            with open(problem_p1, mode="w")as f:
+                f.write("")
+    pass
+
+
 def funcs_():
     pass
 
@@ -182,7 +198,9 @@ def run():
     # combine 1 and 2
     # search_gbk2utf8(code_src, output)
 
-    generate_template()
+    # generate_template()
+
+    generate_p1()
 
 
 if __name__ == "__main__":
