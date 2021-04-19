@@ -40,17 +40,32 @@ public:
         }
 
         int rootPos = vinStart;
-        for (int i = 0; i < vin.size(); ++i) {
+//        wrong
+//        for (int i = 0; i <= vin.size(); ++i) {
+//            if (vin[i] == rootVal) {
+//                break;
+//            }
+//            rootPos++;
+//        }
+
+        for (int i = vinStart; i <= vinEnd; ++i) {
             if (vin[i] == rootVal) {
                 break;
             }
             rootPos++;
         }
+
+//        while (vinStart <= vinEnd && rootVal != vin[rootPos])
+//            rootPos++;
+        if (rootPos == vinEnd && rootVal != vin[rootPos])
+            throw invalid_argument("invalid_argument");
+
         CppUtils::print(rootPos);
         if (vinStart == vinEnd && vin[rootPos] != rootVal)
             throw invalid_argument("invalid input");
 
         int leftLength = rootPos - vinStart;
+//        int leftEnd = preStart + leftLength;
         if (leftLength > 0)
             root->left = constructHelper(pre, preStart + 1, preStart + leftLength, vin, vinStart,
                                          rootPos - 1);
@@ -67,6 +82,7 @@ int main() {
     vector<int> vin{4, 7, 2, 1, 5, 3, 8, 6};
     TreeNode *res = so->reConstructBinaryTree(pre, vin);
     CppUtils::preorderTraversal(res);
+    CppUtils::print();
     CppUtils::inorderTraversal(res);
     delete so;
     return 0;
