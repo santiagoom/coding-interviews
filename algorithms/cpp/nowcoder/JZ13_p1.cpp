@@ -21,24 +21,28 @@ public:
      * @param array int整型vector
      * @return int整型vector
      */
-    vector<int> reOrderArray(vector<int>& array) {
+    vector<int> reOrderArray(vector<int> &array) {
         // write code here
+        for (int i = 0; i < array.size(); ++i) {
+            if (array[i] % 2 == 0)
+                continue;
+            else {
+                int j = i;
+                while (j > 0 && array[j - 1] % 2 == 0) {
+                    swap(array[j], array[j - 1]);
+                    j--;
+                }
+            }
+        }
+        return array;
     }
 };
 
 int main() {
     auto *so = new Solution();
-    vector<int> nums{1, 2, 3, 4, 5, 6};
-    string str = "coding for fun!";
-    vector<vector<int> > array = {
-            {1, 2, 8,  9},
-            {2, 4, 9,  12},
-            {4, 7, 10, 13},
-            {6, 8, 11, 15}
-    };
-    CppUtils::print_1d_vector(nums);
-    CppUtils::print_2d_vector(array);
-    CppUtils::print(str);
+    vector<int> nums{1, 2, 5, 8, 7, 3, 4};
+    vector<int> res = so->reOrderArray(nums);
+    CppUtils::print_1d_vector(res);
     delete so;
     return 0;
 }
