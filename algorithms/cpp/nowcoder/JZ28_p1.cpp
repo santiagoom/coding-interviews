@@ -12,16 +12,16 @@ using namespace std;
 
 class Solution {
 public:
-    int MoreThanHalfNum_Solution(vector<int> &numbers) {
+    int MoreThanHalfNum_Solution(vector<int> numbers) {
         if (numbers.empty())
             return 0;
-        int res = numbers[0];
+        int number = numbers[0];
         int time = 1;
-        for (int i = 0; i < numbers.size(); i++) {
+        for (int i = 1; i < numbers.size(); ++i) {
             if (time == 0) {
-                res = numbers[i];
+                number = numbers[i];
                 time = 1;
-            } else if (numbers[i] == res) {
+            } else if (numbers[i] == number) {
                 time++;
             } else {
                 time--;
@@ -29,12 +29,12 @@ public:
         }
 
         time = 0;
-        for (int i = 0; i < numbers.size(); i++) {
-            if (numbers[i] == res)
+        for (int i = 0; i < numbers.size(); ++i) {
+            if (number == numbers[i])
                 time++;
         }
         if (time * 2 > numbers.size())
-            return res;
+            return number;
         return 0;
     }
 };
