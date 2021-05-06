@@ -8,6 +8,10 @@ using namespace std;
 // 面试题67：把字符串转换成整数
 // 题目：请你写一个函数StrToInt，实现把字符串转换成整数这个功能。当然，不
 // 能使用atoi或者其他类似的库函数。
+//输入
+//"+2147483647"
+//返回值
+//2147483647
 
 class Solution {
 public:
@@ -36,17 +40,10 @@ public:
 
 int main() {
     auto *so = new Solution();
-    vector<int> nums{1, 2, 3, 4, 5, 6};
-    string str = "coding for fun!";
-    vector<vector<int> > array = {
-            {1, 2, 8,  9},
-            {2, 4, 9,  12},
-            {4, 7, 10, 13},
-            {6, 8, 11, 15}
-    };
-    CppUtils::print_1d_vector(nums);
-    CppUtils::print_2d_vector(array);
-    CppUtils::print(str);
+    string str = "+2147483647";
+    int res = so->StrToInt(str);
+    CppUtils::print(res);
     delete so;
     return 0;
 }
+
