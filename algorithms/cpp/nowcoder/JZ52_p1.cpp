@@ -21,6 +21,10 @@ public:
      * @param pattern string字符串
      * @return bool布尔型
      */
+    bool match(string str, string pattern) {
+        return matchCore(str, pattern, 0, 0);
+    }
+
     bool matchCore(string &str, string &pattern, int i, int j) {
         if (i == str.size() && j == pattern.size()) return true;
         if (i != str.size() && j == pattern.size()) return false;
@@ -36,14 +40,14 @@ public:
         return false;
     }
 
-    bool match(string str, string pattern) {
-        return matchCore(str, pattern, 0, 0);
-    }
 };
 
 int main() {
     auto *so = new Solution();
-    cout << "new file!" << endl;
+    string str = "aaa";
+    string pattern = "ab*ac*a";
+    bool res = so->match(str, pattern);
+    CppUtils::print(res);
     delete so;
     return 0;
 }
