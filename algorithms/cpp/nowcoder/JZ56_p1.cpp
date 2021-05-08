@@ -26,11 +26,11 @@ public:
     ListNode *deleteDuplication(ListNode *pHead) {
         if (pHead == nullptr || pHead->next == nullptr) return nullptr;
         ListNode *dummy = new ListNode(0);
+        dummy->next = pHead;
         ListNode *prev = dummy;
         ListNode *curr = nullptr;
         ListNode *temp = nullptr;
 
-        prev->next = pHead;
         while (prev->next != nullptr) {
             curr = prev->next;
             if (curr->next != nullptr && curr->val == curr->next->val) {
