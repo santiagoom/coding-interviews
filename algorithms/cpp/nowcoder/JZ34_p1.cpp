@@ -9,6 +9,8 @@ using namespace std;
 // 如果没有则返回 -1（需要区分大小写）.（从0开始计数）
 // "google" 4
 
+//选择排序
+
 class Solution {
 public:
     int FirstNotRepeatingChar(string str) {

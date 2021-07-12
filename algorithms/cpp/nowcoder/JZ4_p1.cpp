@@ -19,6 +19,10 @@ using namespace std;
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
+// 利用index去定位，免得利用长度得加start index
+
+
 class Solution {
 public:
     TreeNode *reConstructBinaryTree(vector<int> pre, vector<int> vin) {

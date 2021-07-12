@@ -51,7 +51,7 @@ public:
         array[0] = 1;
         int i2 = 0, i3 = 0, i5 = 0;
         int tmp, tmp2, tmp3, tmp5;
-        for (int i = 1; i < index; ++i) {
+        for (int i = 1; i <= index; ++i) {
             tmp2 = 2 * array[i2];
             tmp3 = 3 * array[i3];
             tmp5 = 5 * array[i5];
@@ -65,13 +65,15 @@ public:
             if (tmp == tmp5)
                 i5++;
         }
-        return array[index - 1];
+        return array[index];
     }
 };
 
 int main() {
+//    auto *so = new Solution();
     auto *so = new Solution1();
-    int index = 1500;
+//    int index = 1500;
+    int index =4;
     int res = so->GetUglyNumber_Solution(index);
     CppUtils::print(res);
     delete so;

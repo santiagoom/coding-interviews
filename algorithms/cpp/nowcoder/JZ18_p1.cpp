@@ -16,6 +16,14 @@ using namespace std;
  *	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
  * };
  */
+
+//if (pRoot == nullptr || pRoot->left == nullptr && pRoot->right == nullptr) return pRoot;
+//leaf node
+
+//swap function
+
+
+
 class Solution {
 public:
     /**

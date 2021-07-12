@@ -16,6 +16,7 @@ public:
         if (numbers.size() <= 0) return str;
 
         sort(numbers.begin(), numbers.end(), cmp);
+//        CppUtils::print_1d_vector(numbers);
         for (int i = 0; i < numbers.size(); ++i) {
             str += to_string(numbers[i]);
         }
@@ -36,10 +37,10 @@ int main() {
     string res = so->PrintMinNumber(nums);
     CppUtils::print(res);
 
-//    int a = 3;
-//    int b = 32;
-//    bool cmp = so->cmp(a, b);
-//    CppUtils::print(cmp);
+    int a = 3;
+    int b = 32;
+    bool cmp = so->cmp(a, b);
+    CppUtils::print(cmp);
     delete so;
     return 0;
 }

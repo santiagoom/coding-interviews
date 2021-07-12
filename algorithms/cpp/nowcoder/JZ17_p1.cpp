@@ -17,6 +17,16 @@ struct TreeNode {
 			val(x), left(NULL), right(NULL) {
 	}
 };*/
+
+
+//if (pRoot1 == nullptr || pRoot1->val != pRoot2->val)
+//return false;
+//not
+//if (pRoot1 == nullptr )
+//return false;
+
+
+
 class Solution {
 public:
     bool HasSubtree(TreeNode *pRoot1, TreeNode *pRoot2) {

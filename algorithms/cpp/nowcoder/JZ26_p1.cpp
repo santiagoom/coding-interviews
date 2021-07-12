@@ -18,6 +18,10 @@ struct TreeNode {
 			val(x), left(NULL), right(NULL) {
 	}
 };*/
+
+// 中序遍历, 需要右移pLastNode, (*pLastNode) = pCurrent;
+
+
 class Solution {
 public:
     TreeNode *Convert(TreeNode *pRootOfTree) {
